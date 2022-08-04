@@ -8,11 +8,13 @@
   - <details>
     <summary>Click to expand!</summary>
   
-    ## Heading
-    1. A numbered
-    2. list
-      * With some
-      * Sub bullets
+    + Computer Architecture
+    + Computer Networks
+    + Operating Systems
+    + Database
+    + Programming Languages
+    + ...
+    + **Data structures and algorithms**
   </details>
 
 # 1. Classic Algorithm Interview Questions
