@@ -5,7 +5,7 @@
 ## 1.1 Why Data structures and algorithms(DSA)?
 + CSCI241 and CSCI241L are in the Balance Sheet.
 + DSA is one of the CS core courses.
-<details>
+  - <details>
   <summary>Click to expand!</summary>
   
   ## Heading
