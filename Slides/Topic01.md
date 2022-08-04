@@ -130,6 +130,16 @@ An algorithm to add two numbers:
   - [LeetCode Solutions](https://ningzhangfisk.github.io/CSCI241/Resources/leetcode%20solutions.pdf)
 + Real-world projects and applications.
 
+# 2. Java Programming Language
++ Go through Chapters 1 and 2 in the textbook or any tutorial online to review Java programming language.
+  - See the handouts for these two chapters [here](../Handouts)
++ You can use any online/offline text editor or IDE in this class. 
+  - Text editor: Notepad++, Sublime, VI, Emacs...
+  - IDE: Ecllipes, BlueJ, IntelliJ,...
++ I will be using an online IDE named [Replit](https://replit.com/)
+  - [Replit Documentations](https://docs.replit.com/category/getting-started)
+## 2.1 An example
+
 
 
 # References
