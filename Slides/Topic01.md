@@ -6,14 +6,14 @@
 + CSCI241 and CSCI241L are in the Balance Sheet.
 + DSA is one of the CS core courses.
   - <details>
-  <summary>Click to expand!</summary>
+    <summary>Click to expand!</summary>
   
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
+    ## Heading
+    1. A numbered
+    2. list
+      * With some
+      * Sub bullets
+  </details>
 
 # 1. Classic Algorithm Interview Questions
 ## 1.1 [String matching](https://en.wikipedia.org/wiki/String-searching_algorithm)
