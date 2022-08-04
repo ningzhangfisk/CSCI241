@@ -1,6 +1,19 @@
 # CSCI241 - Data Structures and Algorithms
 # Dr. Ning Zhang
 # Topic 1: Introduction to CSCI241
+# 1. Data structures and algorithms
+## 1.1 Why Data structures and algorithms(DSA)?
++ CSCI241 and CSCI241L in the Balance Sheet.
++ DSA is one of the CS core courses
+<details>
+  <summary>Click to expand!</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
 
 # 1. Classic Algorithm Interview Questions
 ## 1.1 [String matching](https://en.wikipedia.org/wiki/String-searching_algorithm)
