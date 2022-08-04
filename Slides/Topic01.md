@@ -6,7 +6,7 @@
 + CSCI241 and CSCI241L are in the Balance Sheet.
 + DSA is one of the CS core courses.
 <details>
-  <summary> - Click to expand!</summary>
+  <summary>Click to expand!</summary>
   
   ## Heading
   1. A numbered
