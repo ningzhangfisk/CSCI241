@@ -79,3 +79,6 @@ for(i=0; i<array.size; i++){
 
 ![1darray-7](../Resources/1darray-7.png)
   
+### 2.1.2.3 Delete an element
+
+![1darray-8](../Resources/1darray-8.png)
