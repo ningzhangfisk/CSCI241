@@ -27,7 +27,7 @@
   - **Search** − Searches an element using the given index or by the value.
   - **Update** − Updates an element at the given index.
   - **Sort** - Sort elements in order(we will learn this in later topics).
-+ For the following subsections 2.1.2.1 - 2.1.2.6, we use [OneDimensionalArray class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/OneDimensionalArray.java) as an example. You can also see the [ScoreBoard](https://replit.com/@ZhangNing1/CSCI241NingZhang#dsaj/arrays/Scoreboard.java) example provided by the textbook.
++ For the following subsections 2.1.2.1 - 2.1.2.7, we use [OneDimensionalArray class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/OneDimensionalArray.java) as an example. You can also see the [ScoreBoard](https://replit.com/@ZhangNing1/CSCI241NingZhang#dsaj/arrays/Scoreboard.java) example provided by the textbook.
 ### 2.1.2.1 Create an array
 + Method 1: Use an assignment to a literal
   - Syntax: The elementType can be any Java base type or class name, and arrayName can be any valid Java identifier. The initial values must be of the same type as the array.
@@ -92,3 +92,33 @@ for(i=0; i<array.size; i++){
 ![1darray-10](../Resources/1darray-10.png)
 
 ![1darray-11](../Resources/1darray-11.png)
+
+### 2.1.2.7 Sort an array
++ We will learn different **sorting** algrithms later. Currently, let's use the built-in method provide by Java.
++ Example
+~~~~~
+int[] nums = {3,2,1,5,4};
+java.util.Arrays.sort(nums);
+~~~~~
+
+# 2.2 Two Dimensional Arrays
+
+![2d array](https://www.researchgate.net/profile/Tarfa-Hamed/publication/348960574/figure/fig1/AS:986686548877312@1612255813247/2D-array-with-three-rows-and-four-columns.png)
+
+## 2.2.1 Introduction
++ 2D array can be defined as an array of arrays.
++ 2D array is organized as matrices which can be represented as the collection of rows and columns.
++ 2D arrays are created to implement a relational database look alike data structure. It provides ease of holding bulk of data at once which can be passed to any number of functions wherever required.
+
+## 2.1.2 Basic Operations
++ Following are the basic operations supported by an array.(Note that you can add more operations based on specific requirements. For example, if you need to use 2d array as the model of matrices in mathematics, then you need to provide operations like matrix addition, subtraction, multiplication, transpose, etc. )
+  - **Traverse** − print all the array elements one by one.
+  - **Insertion** − Adds a new row or column at the given index.
+  - **Deletion** − Deletes a row or column at the given index.
+  - **Search** − Searches an element using the given position or by the value.
+  - **Update** − Updates an element at the given position.
++ For the following subsections 2.2.2.1 - 2.2.2.6, we use [TwoDimensionalArray class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/TwoDimensionalArray.java) as an example.
+### 2.1.2.1 Create a 2d array
+
+# References
+[2D Array JavaPoint](https://www.javatpoint.com/data-structure-2d-array)
