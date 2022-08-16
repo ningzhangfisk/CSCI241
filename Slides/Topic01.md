@@ -102,7 +102,7 @@ An algorithm to add two numbers:
 
 ## 1.3.1.2 Tower of Hanoi
 + [Play the game here](https://www.mathplayground.com/logic_tower_of_hanoi.html)
-+ Divide-and-Conquer
++ [Divide-and-Conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)
 ## 1.3.1.3 [8 Queens](https://en.wikipedia.org/wiki/Eight_queens_puzzle#:~:text=The%20eight%20queens%20puzzle%20is,in%20the%20mid%2D19th%20century.)
 + The eight queens puzzle is the problem of placing eight chess queens on an 8×8 chessboard so that no two queens threaten each other; thus, a solution requires that no two queens share the same row, column, or diagonal. There are 92 solutions. The problem was first posed in the mid-19th century. In the modern era, it is often used as an example problem for various computer programming techniques.
 
