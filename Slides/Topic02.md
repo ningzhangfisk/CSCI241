@@ -66,7 +66,7 @@ for(i=0; i<array.size; i++){
 ![1darray-3](../Resources/1darray-3.png)
 
 
-### 2.1.2.2 Insert a new element
+### 2.1.2.3 Insert a new element
 + The new element is inserted between the existing elements.
 
 ![1darray-4](../Resources/1darray-4.png)
@@ -79,6 +79,16 @@ for(i=0; i<array.size; i++){
 
 ![1darray-7](../Resources/1darray-7.png)
   
-### 2.1.2.3 Delete an element
+### 2.1.2.4 Delete an element
 
 ![1darray-8](../Resources/1darray-8.png)
+
+### 2.1.2.5 Search an element
+
+![1darray-9](../Resources/1darray-9.png)
+
+### 2.1.2.6 Update an element
+
+![1darray-10](../Resources/1darray-10.png)
+
+![1darray-11](../Resources/1darray-11.png)
