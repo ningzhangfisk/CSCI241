@@ -29,7 +29,7 @@
   - **Sort** - Sort elements in order(we will learn this in later topics).
 
 ### 2.1.2.1 Create an array
-+ Method 1: $$elementType[] arrayName = \{initialValue0, initialValue1, ..., initialValue_{N-1}\};$$
++ Method 1: $$elementType[] arrayName = {{ initialValue0, initialValue1, ..., initialValue_{N-1} }};$$
 ~~~~
 // example
 int[] nums = {1,2,3,4,5};
