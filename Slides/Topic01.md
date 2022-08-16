@@ -138,8 +138,12 @@ An algorithm to add two numbers:
   - IDE: Ecllipes, BlueJ, IntelliJ,...
 + I will be using an online IDE named [Replit](https://replit.com/)
   - [Replit Documentations](https://docs.replit.com/category/getting-started)
-## 2.1 An example
-+ [Two dimensional array](https://replit.com/@ZhangNing1/CSCI241#CSCI241/Array.java)
+## 2.1 Minimum Requirements in CSCI241
++ Compile and execute a Java program
+  - If you are using Replit, see the first lab in CSCI241L for more details.
+  - [Two dimensional array](https://replit.com/@ZhangNing1/CSCI241#CSCI241/Array.java)
++ Java Class
+  - [One dimensional array](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/OneDimensionalArray.java)
 
 
 # References
