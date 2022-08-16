@@ -39,7 +39,7 @@
   int[] nums = {1,2,3,4,5};
   ~~~~
   
-  ![1darray-1](../Resources/1darray-1/png)
+  ![1darray-1](../Resources/1darray-1.png)
   
 + Method 2: **new** operator
   - Syntax: **length** is a positive integer denoting the length of the array. The **new** opeartor returns a reference to the new array, and typically this would be assigned to an array variable.
@@ -51,7 +51,7 @@
   int[] nums = new int[5];
   ~~~~
   
- ![1darray-1](../Resources/1darray-1/png)
+ ![1darray-2](../Resources/1darray-2.png)
     
 ### 2.1.2.2 Traverse an array
 + Array traversal: processing each array element sequentially from the first to the last.
