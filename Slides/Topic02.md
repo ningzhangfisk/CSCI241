@@ -27,10 +27,40 @@
   - **Search** − Searches an element using the given index or by the value.
   - **Update** − Updates an element at the given index.
   - **Sort** - Sort elements in order(we will learn this in later topics).
-
++ For the following subsections 2.1.2.1 - 2.1.2.6, we use [OneDimensionalArray class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/OneDimensionalArray.java) as an example. You can also see the [ScoreBoard](https://replit.com/@ZhangNing1/CSCI241NingZhang#dsaj/arrays/Scoreboard.java) example provided by the textbook.
 ### 2.1.2.1 Create an array
-+ Method 1: $$elementType[] arrayName = {{ initialValue0, initialValue1, ..., initialValue_{N-1} }};$$
++ Method 1: Use an assignment to a literal
+  - Syntax: The elementType can be any Java base type or class name, and arrayName can be any valid Java identifier. The initial values must be of the same type as the array.
+  ~~~~
+  elementType[] arrayName = {initialValue0, initialValue1, ..., initialValueN-1};
+  ~~~~
+  - Example
+  ~~~~
+  int[] nums = {1,2,3,4,5};
+  ~~~~
+  
+  ![1darray-1](../Resources/1darray-1/png)
+  
++ Method 2: **new** operator
+  - Syntax: **length** is a positive integer denoting the length of the array. The **new** opeartor returns a reference to the new array, and typically this would be assigned to an array variable.
+  ~~~~
+  elementType[] arrayName = new elementType[length];
+  ~~~~
+  - Example:
+  ~~~~
+  int[] nums = new int[5];
+  ~~~~
+  
+ ![1darray-1](../Resources/1darray-1/png)
+    
+### 2.1.2.2 Traverse an array
++ Array traversal: processing each array element sequentially from the first to the last.
+  - Q: How could we define `the last`?
+  - A: In our class, we use the last item we added into the array(the `size` attribute in `OneDimensionalArray` class).
 ~~~~
-// example
-int[] nums = {1,2,3,4,5};
+for(i=0; i<array.size; i++){
+  do something with array[i];
+}
 ~~~~
+
+### 2.1.2.2 Insert a new element
