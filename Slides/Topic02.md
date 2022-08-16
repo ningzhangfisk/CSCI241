@@ -63,4 +63,19 @@ for(i=0; i<array.size; i++){
 }
 ~~~~
 
+![1darray-3](../Resources/1darray-3.png)
+
+
 ### 2.1.2.2 Insert a new element
++ The new element is inserted between the existing elements.
+
+![1darray-4](../Resources/1darray-4.png)
+
++ Some special cases
+
+![1darray-5](../Resources/1darray-5.png)
+
+![1darray-6](../Resources/1darray-6.png)
+
+![1darray-7](../Resources/1darray-7.png)
+  
