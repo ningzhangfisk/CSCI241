@@ -103,7 +103,7 @@ java.util.Arrays.sort(nums);
 
 # 2.2 Two Dimensional Arrays
 
-![2darray](https://www.researchgate.net/profile/Tarfa-Hamed/publication/348960574/figure/fig1/AS:986686548877312@1612255813247/2D-array-with-three-rows-and-four-columns.png)
+![2darray](../Resources/2darray-1.png)
 
 ## 2.2.1 Introduction
 + 2D array can be defined as an array of arrays.
@@ -119,6 +119,28 @@ java.util.Arrays.sort(nums);
   - **Update** − Updates an element at the given position.
 + For the following subsections 2.2.2.1 - 2.2.2.6, we use [TwoDimensionalArray class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/TwoDimensionalArray.java) as an example.
 ### 2.1.2.1 Create a 2d array
-
++ Method 1: Use an assignment to a literal
+  - Syntax
+  ~~~~
+  elementType[][] arrayName = {initialValue00, initialValue01, ..., initialValue0N-1};
+  ~~~~
+  - Example
+  ~~~~
+  int[] nums = {1,2,3,4,5};
+  ~~~~
+  
+  ![1darray-1](../Resources/1darray-1.png)
+  
++ Method 2: **new** operator
+  - Syntax: **length** is a positive integer denoting the length of the array. The **new** opeartor returns a reference to the new array, and typically this would be assigned to an array variable.
+  ~~~~
+  elementType[] arrayName = new elementType[length];
+  ~~~~
+  - Example:
+  ~~~~
+  int[] nums = new int[5];
+  ~~~~
+  
+ ![1darray-2](../Resources/1darray-2.png)
 # References
 [2D Array JavaPoint](https://www.javatpoint.com/data-structure-2d-array)
