@@ -103,7 +103,7 @@ java.util.Arrays.sort(nums);
 
 # 2.2 Two Dimensional Arrays
 
-![2d array](https://www.researchgate.net/profile/Tarfa-Hamed/publication/348960574/figure/fig1/AS:986686548877312@1612255813247/2D-array-with-three-rows-and-four-columns.png)
+![2darray](https://www.researchgate.net/profile/Tarfa-Hamed/publication/348960574/figure/fig1/AS:986686548877312@1612255813247/2D-array-with-three-rows-and-four-columns.png)
 
 ## 2.2.1 Introduction
 + 2D array can be defined as an array of arrays.
