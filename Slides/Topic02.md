@@ -141,7 +141,7 @@ java.util.Arrays.sort(nums);
   int[][] nums = new int[2][3];
   ~~~~
   
- ![2darray-3](../Resources/1darray-3.png)
+ ![2darray-3](../Resources/2darray-3.png)
  
 # References
 [2D Array JavaPoint](https://www.javatpoint.com/data-structure-2d-array)
