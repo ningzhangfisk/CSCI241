@@ -2,7 +2,7 @@
 # Dr. Ning Zhang
 # Topic 2: Arrays
 + One dimensional arrays(section 3.1 in textbook)
-+ Two dimensional arrays()
++ Two dimensional arrays
 + Sparse matrices
 
 # 2.1 One dimensional arrays
