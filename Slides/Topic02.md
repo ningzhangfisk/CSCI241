@@ -177,6 +177,14 @@ for(i=0; i<array.height; i++){
 
 + Of course,we need to consider the `IndexOutOfBoundsException` exception.
 
+### 2.2.2.3 Insert and Delete
++ We are not going to learn the implementation of these two methods in Java code.
++ But either inserting/deleting an element or a row/column is feasible in Java. You can try to implement those methods in [TwoDimensionalArray class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/TwoDimensionalArray.java)
+
+![2darray-5](../Resources/2darray-5.png)
+
+![2darray-6](../Resources/2darray-6.png)
+
 # 2.3 Sparse Matrix
 ## 2.3.1 One application: Gomoku/Five-in-a-row
 + [Game Introduction](https://en.wikipedia.org/wiki/Gomoku)
@@ -239,5 +247,10 @@ for(i=0; i<array.height; i++){
 ## 2.3.2  sparse matrix to 2D array
 + Step 1: read the first row from sparse matrix, create 2D array according to the numbers of rows and columns. E.g., `chessArr = new int[13][13]`.
 + Step 2: read the other rows from sparse matrix, assign non-zeros to 2D array.
+
+## 2.3.3 more operations
++ Save the spare matrix as a file on the hard disk.
++ Read the file stroed on the hard disk and recover the spare matrix and 2D array.
++ You can try to implement these operations after class.
 # References
 [2D Array JavaPoint](https://www.javatpoint.com/data-structure-2d-array)
