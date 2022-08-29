@@ -25,7 +25,7 @@
 + **delete**: To delete a node.
 + **search**: To search an element(s) by value.
 + **update**: To update a node.
-+ **sort**: To arrange nodes in a linked list in a specific order.
++ **sort**: To arrange nodes in a linked list in a specific order.(not covered in this topic)
 + **merge**: To merge two linked lists into one.
 
 ### 3.1.2.1 traverse
@@ -66,7 +66,7 @@
   - step 2: Traverse to node just before the required position of new node(e.g., if we need to insert a node after the 4th node, the key is to start from the `head` and find the 4th node or `next` of the 3rd node, then define it as `prevNode`)
   - step 3: follow the same steps(steps 2 and 3) in **Insertion after a node** operation
 
-### 3.1.2.2 delete
+### 3.1.2.3 delete
 + To delete a node from a linked list, we need to do these steps
   - Deletion at the head
   - Deletion at the tail (Append)
@@ -89,6 +89,28 @@
   - step 2: change `next` of `previous node` to `next` of `delete node`
 
 ![single list9](../Resources/single_list-9.png)
+
+### 3.1.2.4 search
++ Traverse the list to compare the `element` of each node with the `key` value
++ Return `true` if the `key` matches `element`
++ Return `false` if no match in the entire list
+
+![single list10](../Resources/single_list-10.png)
+
+### 3.1.2.5 update
+
++ Update the first element with `key` value to `newValue`
++ Traverse the list to compare the `element` of each node with the `key` value
++ Update `element` to `newValue` if the `key` matches `element`
+
+![single list11](../Resources/single_list-11.png)
+
+### 3.1.2.6 merge
++ change `next` of `tail` of the first list to `head` of the second list
++ change `next` of the first list  to `next` of the second list
+
+
+![single list12](../Resources/single_list-12.png)
 
 # References
 + [Types of Linked List and Operation on Linked List](https://afteracademy.com/blog/types-of-linked-list-and-operation-on-linked-list)
