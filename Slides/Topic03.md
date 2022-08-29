@@ -6,7 +6,13 @@
 + Doubly Linked Lists(section 3.4 in textbook)
 
 # 3.1 Singly Linked Lists
+
+![single list0](../Resources/single_list-0.png)
+
 ## 3.1.1 Introduction
+
+
+
 + A singly linked list is a concrete data structure consisting of a sequence of nodes, starting from a head pointer.
 
 ![single list2](../Resources/single_list-2.png)
