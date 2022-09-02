@@ -196,20 +196,20 @@
   - step 2: change `tail` to `previous node`
   - step 3: change `next` of new `tail` to `null`
 
-![circular list8](../Resources/single_list-8.png)
+![circular list8](../Resources/circular_list-8.png)
 
 + **Delete node**
   - step 1: traverse to find `previous node` before `delete node`
   - step 2: change `next` of `previous node` to `next` of `delete node`
 
-![circular list9](../Resources/single_list-9.png)
+![circular list9](../Resources/circular_list-9.png)
 
 ### 3.2.2.4 search
 + Traverse the list to compare the `element` of each node with the `key` value
 + Return `true` if the `key` matches `element`
 + Return `false` if no match in the entire list
 
-![circular list10](../Resources/single_list-10.png)
+![circular list10](../Resources/circular_list-10.png)
 
 ### 3.2.2.5 update
 
