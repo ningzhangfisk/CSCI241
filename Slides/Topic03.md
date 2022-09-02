@@ -113,7 +113,7 @@
 
 ### 3.1.2.6 merge
 + change `next` of `tail` of the first list to `head` of the second list
-+ change `next` of the first list  to `next` of the second list
++ change `tail` of the first list  to `tail` of the second list
 
 
 ![single list12](../Resources/single_list-12.png)
@@ -194,7 +194,7 @@
 + **Delete tail**
   - step 1: traverse to find `previous node` before `tail`
   - step 2: change `tail` to `previous node`
-  - step 3: change `next` of new `tail` to `null`
+  - step 3: change `next` of new `tail` to `head`
 
 ![circular list8](../Resources/circular_list-8.png)
 
@@ -221,7 +221,9 @@
 
 ### 3.2.2.6 merge
 + change `next` of `tail` of the first list to `head` of the second list
-+ change `next` of the first list  to `next` of the second list
++ change `tail` of the first list  to `tail` of the second list
++ change `tail` of the second list  to `head` of the first list
+
 
 
 ![circular list12](../Resources/single_list-12.png)
