@@ -92,7 +92,7 @@
 
 
 + **Delete node**
-  - step 1: traverse to find `previous node` before `delete node`
-  - step 2: change `next` of `previous node` to `next` of `delete node`
+  - step 1: change `next` of `previous node` to `next` of `delete node`
+  - step 2: change `prev` of `next node` to `prev` of `delete node`
 
 ![single list9](../Resources/single_list-9.png)
