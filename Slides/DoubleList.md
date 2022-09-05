@@ -12,7 +12,7 @@
 
 
 
-![double list 2](../Resources/double_list-2.png)
+![double list 2](../Resources/doubl3_list-2.png)
 
 
 + Note that we do not use the two `dummy` nodes (see more details in the textbook) in our doubly linked list.
@@ -57,7 +57,7 @@
   - step 3: Change `next` of `tail` to `new node` and `prev` of `new node` to `tail`
   - step 4: change `tail` to point to `new node`
  
-![double list4](../Resources/double_list-4.png)
+![double list4](../Resources/doubl3_list-4.png)
 
 
 + **Insertion after a node**
