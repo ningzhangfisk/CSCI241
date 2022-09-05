@@ -217,7 +217,7 @@
 + Traverse the list to compare the `element` of each node with the `key` value
 + Update `element` to `newValue` if the `key` matches `element`
 
-![circular list11](../Resources/single_list-11.png)
+![circular list11](../Resources/circular_list-11.png)
 
 ### 3.2.2.6 merge
 + change `next` of `tail` of the first list to `head` of the second list
@@ -226,7 +226,7 @@
 
 
 
-![circular list12](../Resources/single_list-12.png)
+![circular list12](../Resources/circular_list-12.png)
 
 
 # References
