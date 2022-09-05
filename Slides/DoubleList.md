@@ -96,3 +96,26 @@
   - step 2: change `prev` of `next node` to `prev` of `delete node`
 
 ![double list9](../Resources/double_list-9.png)
+
+### 3.3.2.3 search
++ Traverse the list to compare the `element` of each node with the `key` value
++ Return `true` if the `key` matches `element`
++ Return `false` if no match in the entire list
+
+![double list10](../Resources/double_list-10.png)
+
+### 3.3.2.3 update
++ Update the first element with `key` value to `newValue`
++ Traverse the list to compare the `element` of each node with the `key` value
++ Update `element` to `newValue` if the `key` matches `element`
+
+
+![double list11](../Resources/double_list-11.png)
+
+### 3.3.2.3 merge
++ change `next` of `tail` of the first list to `head` of the second list
++ change `prev` of `head` of the second list to `tail` of the first list
++ change `tail` of the first list  to `tail` of the second list
+
+
+![double list12](../Resources/double_list-12.png)
