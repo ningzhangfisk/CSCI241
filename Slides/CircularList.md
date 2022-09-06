@@ -8,7 +8,7 @@
 
 ![circular_list-1](../Resources/circular_list-1.png)
 
-+ For `Singly Linked List` data structure, we use [SingleLinkedList class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/CircularlyLinkedList.java).
++ For `Circularly Linked List` data structure, we use [CircularlyLinkedList class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/CircularlyLinkedList.java).
 
 ## 3.2.2 Operations
 + **traverse**: To traverse all the nodes one after another.
