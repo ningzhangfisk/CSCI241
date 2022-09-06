@@ -10,6 +10,11 @@
 
 + For `Circularly Linked List` data structure, we use [CircularlyLinkedList class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/CircularlyLinkedList.java).
 
++ Application of Circular Linked List
+  - The real life application where the circular linked list is used is our Personal Computers, where multiple applications are running. All the running applications are kept in a circular linked list and the OS gives a fixed time slot to all for running. The Operating System keeps on iterating over the linked list until all the applications are completed.
+  - Another example can be Multiplayer games. All the Players are kept in a Circular Linked List and the pointer keeps on moving forward as a player's chance ends.
+  - Circular Linked List can also be used to create Circular Queue. In a Queue we have to keep two pointers, FRONT and REAR in memory all the time, where as in Circular Linked List, only one pointer is required.
+
 ## 3.2.2 Operations
 + **traverse**: To traverse all the nodes one after another.
 + **insert**: To add a node at the given position.
@@ -106,3 +111,6 @@
 
 
 ![circular list12](../Resources/circular_list-12.png)
+
+# References
+[StudyTonight](https://www.studytonight.com/data-structures/circular-linked-list)
