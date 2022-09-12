@@ -36,63 +36,31 @@
 ![array stack 2](../Resources/array_stack-2.png)
 
 ### 4.1.3.2 push
-+ Step 1: Checks if the stack is full. If the stack is full, produces an error and exit.
++ Step 1: Check if the stack is full. If the stack is full, produces an error and exit.
 + Step 2: If the stack is not full, increments top to point next empty space.
-+ Step 3: Adds data element to the stack location, where top is pointing.
++ Step 3: Add data element to the stack location, where top is pointing.
 
 
 ![array stack 3](../Resources/array_stack-3.png)
 
 ### 4.1.3.3 peek
-+ Step 1: Checks if the stack is empty. If the stack is empty, return `null`.
++ Step 1: Check if the stack is empty.  If the stack is empty, produces an error and exit(You can also return `null` if you want).
 + Step 2: If the stack is not empty, return top element.
 
 ![array stack 4](../Resources/array_stack-4.png)
 
 
 ### 4.1.3.4 pop
-+ Step 1: Checks if the stack is empty. If the stack is empty, produces an error and exit.
-+ Step 2: If the stack is not empty, increments top to point next empty space.
-+ Step 3: accesses the data element at which top is pointing.
++ Step 1: Check if the stack is empty. If the stack is empty, produces an error and exit.
++ Step 2: If the stack is not empty, access the element at which top is pointing.
++ Step 3: change `top` to point next space(decrease `top` by 1).
 
-
-![array stack 5](../Resources/array_stack-5.png)
-
-
-## 4.1.3 Array-based Stack
-+ In our class, we focus on integer elements. See [ArrayStack.java](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ArrayStack.java)
-+ For the generic version, See the code provided in the textbook. [ArrayStack.java](https://replit.com/@ZhangNing1/CSCI241NingZhang#net/datastructures/ArrayStack.java)
-
-![array stack 1](../Resources/array_stack-1.png)
-
-### 4.1.3.1 Create a stack object
-+ A newly created stack has a default or given `capacity`.
-+ A newly created stack is empty.
-
-![array stack 2](../Resources/array_stack-2.png)
-
-### 4.1.3.2 push
-+ Step 1: Checks if the stack is full. If the stack is full, produces an error and exit.
-+ Step 2: If the stack is not full, increments top to point next empty space.
-+ Step 3: Adds data element to the stack location, where top is pointing.
-
-
-![array stack 3](../Resources/array_stack-3.png)
-
-### 4.1.3.3 peek
-+ Step 1: Checks if the stack is empty. If the stack is empty, return `null`.
-+ Step 2: If the stack is not empty, return top element.
-
-![array stack 4](../Resources/array_stack-4.png)
-
-
-### 4.1.3.4 pop
-+ Step 1: Checks if the stack is empty. If the stack is empty, produces an error and exit.
-+ Step 2: If the stack is not empty, increments top to point next empty space.
-+ Step 3: accesses the data element at which top is pointing.
 
 
 ![array stack 5](../Resources/array_stack-5.png)
+
+
+
 
 
 
@@ -105,28 +73,30 @@
 ### 4.1.4.1 Create a stack object
 + A newly created stack has NO `nodes`.
 + A newly created stack is empty.
++ Note that we do not need to define `tail` because all the operations will only "change" `head`.
 
 ![list stack 2](../Resources/list_stack-2.png)
 
 ### 4.1.4.2 push
-+ Step 1: Checks if the stack is full. If the stack is full, produces an error and exit.
-+ Step 2: If the stack is not full, increments top to point next empty space.
-+ Step 3: Adds data element to the stack location, where top is pointing.
++ Step 1: Create a new node to store the new element
++ Step 2: change `next` of `new node` to point to `top`
++ Step 3: change `top` to point to `new node`
 
 
 ![list stack 3](../Resources/list_stack-3.png)
 
 ### 4.1.4.3 peek
-+ Step 1: Checks if the stack is empty. If the stack is empty, return `null`.
-+ Step 2: If the stack is not empty, return top element.
++ Step 1: Checks if the stack is empty. If the stack is empty, produces an error and exit(You can also return `null` if you want).
++ Step 2: If the stack is not empty, return element of `top`.
 
 ![list stack 4](../Resources/list_stack-4.png)
 
 
 ### 4.1.4.4 pop
 + Step 1: Checks if the stack is empty. If the stack is empty, produces an error and exit.
-+ Step 2: If the stack is not empty, increments top to point next empty space.
-+ Step 3: accesses the data element at which top is pointing.
++ Step 2: If the stack is not empty, accesses the data element at which top is pointing.
++ Step 3: Change `top` to point to `next node`(`next` of `top`).
+
 
 
 ![list stack 5](../Resources/list_stack-5.png)
