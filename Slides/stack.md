@@ -4,7 +4,7 @@
 + A stack is a collection of objects that are inserted and removed according to the `last-in, first-out (LIFO)` principle.
 + A user may insert objects into a stack at any time, but may only access or remove the most recently inserted object that remains (at the so-called “top” of the stack).
 
-![stack]([https://www.tutorialspoint.com/data_structures_algorithms/images/stack_representation.jpg](https://miro.medium.com/max/473/1*r4Bfo3rrFprzFM2zbgzZXA.jpeg))
+![stack](https://miro.medium.com/max/473/1*r4Bfo3rrFprzFM2zbgzZXA.jpeg)
 
 + The name “stack” is derived from the metaphor of a stack of plates in a spring-loaded, cafeteria plate dispenser.
 
