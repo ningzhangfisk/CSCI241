@@ -21,7 +21,7 @@
 + top(): Returns the top element of the stack, without removing it (or null if the stack is empty)(Another commonly used name is `peak()`).
 + size(): Returns the number of elements in the stack.
 + isEmpty(): Returns a boolean indicating whether the stack is empty.
-+ isFull(): Returns a boolean indicating whether the stack is full. 
++ isFull(): Returns a boolean indicating whether the stack is full(only for array-based stacks). 
 
 ## 4.1.3 Array-based Stack
 + In our class, we focus on integer elements. See [ArrayStack.java](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ArrayStack.java)
