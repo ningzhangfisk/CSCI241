@@ -102,7 +102,11 @@
 ![list stack 5](../Resources/list_stack-5.png)
 
 
-
+# Practice
++ Remember in the lab for singly linked lists, we learned how to reverse a list.
++ So, how can we use a stack(either array-based or list-based) to reverse an array?
++ Hint: Traverse the array and keep pushing each element into a stack, then pop the stack until it is empty.
++ [Code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ReverseArray.java).
 
 
 
