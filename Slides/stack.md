@@ -8,7 +8,7 @@
 
 + The name “stack” is derived from the metaphor of a stack of plates in a spring-loaded, cafeteria plate dispenser.
 
-![plate dispenser](http://cdn.shopify.com/s/files/1/2806/3270/products/T_77414fb8-f431-4656-ad3b-43ff6620664b_1200x1200.jpg?v=1536659978)
+![plate dispenser](http://cdn.shopify.com/s/files/1/2806/3270/products/T_77414fb8-f431-4656-ad3b-43ff6620664b_1200x1200.jpg)
 
 + Stacks are a fundamental data structure. They are used in many applications, including the following.
   - Internet Web browsers store the addresses of recently visited sites on a stack. Each time a user visits a new site, that site’s address is “pushed” onto the stack of addresses. The browser then allows the user to “pop” back to previously visited sites using the “back” button.
