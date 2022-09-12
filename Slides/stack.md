@@ -102,12 +102,33 @@
 ![list stack 5](../Resources/list_stack-5.png)
 
 
-# Practice
+# Practice: reverse array
 + Remember in the lab for singly linked lists, we learned how to reverse a list.
 + So, how can we use a stack(either array-based or list-based) to reverse an array?
 + Hint: Traverse the array and keep pushing each element into a stack, then pop the stack until it is empty.
 + [Code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ReverseArray.java).
 
+# Practice: Matching Parentheses
++ In arithmetic expressions that may contain various pairs of grouping symbols, such as
+  - Parentheses: `(` and `)`
+  - Braces: `{` and `}`
+  - Brackets: `[` and `]`
++ Each opening symbol must match its corresponding closing symbol. For example, a left bracket, `[`, must match a corresponding right bracket, `]`, as in the following expression `[(5+x)−(y+z)]`.
++ The following examples further illustrate this concept:
+  - Correct: `( )(( )){([( )])}`
+  - Correct: `((( )(( )){([( )])}))`
+  - Incorrect: `)(()){([()])}`
+  - Incorrect: `({[])}`
+  - Incorrect: `(`
++ An Algorithm for Matching Delimiters
+  - An important task when processing arithmetic expressions is to make sure their delimiting symbols match up correctly.
+  - We can use a stack to perform this task with a single left-to-right scan of the original string.
+  - Each time we encounter an opening symbol, we push that symbol onto the stack, and each time we encounter a closing symbol, we pop a symbol from the stack (assuming it is not empty) and check that these two symbols form a valid pair.
+  - If we reach the end of the expression and the stack is empty, then the original expression was properly matched. Otherwise, there must be an opening delimiter on the stack without a matching symbol.
+  - It specifically checks for delimiter pairs ( ), { }, and [ ], but could easily be changed to accommodate further symbols(see example `Matching Tags in a Markup Language` in textbook).
+
+
++ [Code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/MatchSymbol.java).
 
 
 # References
