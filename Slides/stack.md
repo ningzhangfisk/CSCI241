@@ -103,7 +103,7 @@
 ![list stack 1](../Resources/list_stack-1.png)
 
 ### 4.1.4.1 Create a stack object
-+ A newly created stack has a default or given `capacity`.
++ A newly created stack has NO `nodes`.
 + A newly created stack is empty.
 
 ![list stack 2](../Resources/list_stack-2.png)
