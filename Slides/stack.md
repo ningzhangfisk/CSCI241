@@ -18,7 +18,7 @@
 ## 4.1.2 Operations
 + push(e): Adds element e to the top of the stack.
 + pop(): Removes and returns the top element from the stack (or null if the stack is empty).
-+ top(): Returns the top element of the stack, without removing it (or null if the stack is empty)(Another commonly used name is `peak()`).
++ top(): Returns the top element of the stack, without removing it (or null if the stack is empty)(Another commonly used name is `peek()`).
 + size(): Returns the number of elements in the stack.
 + isEmpty(): Returns a boolean indicating whether the stack is empty.
 + isFull(): Returns a boolean indicating whether the stack is full(only for array-based stacks). 
