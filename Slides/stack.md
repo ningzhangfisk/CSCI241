@@ -26,6 +26,7 @@
 ## 4.1.3 Array-based Stack
 + In our class, we focus on integer elements. See [ArrayStack.java](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ArrayStack.java)
 + For the generic version, See the code provided in the textbook. [ArrayStack.java](https://replit.com/@ZhangNing1/CSCI241NingZhang#net/datastructures/ArrayStack.java)
++ You can also use the `java.util.Stack Class` directly in Java
 
 ![array stack 1](../Resources/array_stack-1.png)
 
