@@ -54,7 +54,7 @@ Formally, the queue abstract data type defines a collection that keeps objects i
 
 ~~~~
 // pseudo code
-if(queue is empty) return or generate exception
+if(queue is empty) return null or generate exception
 
 first = (first+1)%length;
 sz--;
@@ -74,7 +74,7 @@ return element
 
 ~~~~
 // pseudo code
-if(queue is full) return or generate exception
+if(queue is full) return null or generate exception
 
 index = (first+sz)%length;
 data[index] = element;
