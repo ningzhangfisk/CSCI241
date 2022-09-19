@@ -23,7 +23,7 @@ Formally, the queue abstract data type defines a collection that keeps objects i
 + `isFull()`: Returns a boolean indicating whether the queue is empty(array-based queue only).
 
 ## 4.2.3 Array-bases Queues
-+ In our class, we focus on integer elements. See [ArrayStack.java](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ArrayQueue.java)
++ In our class, we focus on integer elements. See [ArrayQueue.java](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ArrayQueue.java)
 + For the generic version, See the code provided in the textbook. [ArrayQueue.java](https://replit.com/@ZhangNing1/CSCI241NingZhang#net/datastructures/ArrayStack.java)
 + You can also use the `java.util.Queue Class` directly in Java
 
