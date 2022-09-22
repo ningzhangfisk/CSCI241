@@ -82,6 +82,7 @@ sz++;
 ~~~~
 
 ## 4.2.4 Singly Linked List-bases Queues
++ See code [here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ListQueue.java)
 
 ## 4.2.4.1 dequeue
 + equivelant to `delete head` method in singly linked list data structure.
