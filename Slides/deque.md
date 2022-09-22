@@ -23,8 +23,8 @@
 + a representation similar to the [ArrayQueue class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ArrayQueue.java).
 + treating the array in circular fashion and storing the index of the first element and the current size of the deque as fields
 + the index of the last element can be calculated, as needed, using modular arithmetic.
-  - When removing the first element, the front index is advanced in circular fashion, with the assignment f = (f+1) % N.
-  - **One concern**: when an element is inserted at the front, the first index must effectively be decremented in circular fashion and it is a mistake to assign f = (f−1) % N. The problem is that when f is 0, the goal should be to “decrement” it to the other end of the array, and thus to index N−1. However, a calculation such as −1 % 10 in Java results in the value −1. A standard way to decrement an index circularly is instead to assign f = (f−1+N) % N. Adding the additional term of N before the modulus is calculated assures that the result is a positive value. 
+  - When removing the first element, the front index is advanced in circular fashion, with the assignment `first = (first+1) % N`, where N is the length of the array.
+  - **One concern**: when an element is inserted at the front, the first index must effectively be decremented in circular fashion and it is a mistake to assign `first = (first−1) % N`. The problem is that when `first` is 0, the goal should be to “decrement” it to the other end of the array, and thus to index N−1. However, a calculation such as −1 % 10 in Java results in the value −1. A standard way to decrement an index circularly is instead to assign `first = (first−1+N) % N`. Adding the additional term of N before the modulus is calculated assures that the result is a positive value. 
 + See code [here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ArrayDeque.java)
 ## 4.3.4 Implementing a Deque with a Doubly Linked List
 + the `DoublyLinkedList` class from [Section 3.3](DoubleList.md) already implements the entire Deque interface.
