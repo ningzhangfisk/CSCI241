@@ -26,6 +26,32 @@
   - When removing the first element, the front index is advanced in circular fashion, with the assignment `first = (first+1) % N`, where N is the length of the array.
   - **One concern**: when an element is inserted at the front, the first index must effectively be decremented in circular fashion and it is a mistake to assign `first = (first−1) % N`. The problem is that when `first` is 0, the goal should be to “decrement” it to the other end of the array, and thus to index N−1. However, a calculation such as −1 % 10 in Java results in the value −1. A standard way to decrement an index circularly is instead to assign `first = (first−1+N) % N`. Adding the additional term of N before the modulus is calculated assures that the result is a positive value. 
 + See code [here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ArrayDeque.java)
+
+
+### 4.3.3.2 addFirst()
+
+![array_deque-2](../Resources/array_deque-2.png)
+
+![array_deque-3](../Resources/array_deque-3.png)
+
+### 4.3.3.2 addLast()
+
+![array_deque-1](../Resources/array_deque-1.png)
+
+![array_deque-2](../Resources/array_queue-7.png)
+
+
+### 4.3.3.3 removeFirst()
+
+![array_deque-4](../Resources/array_deque-4.png)
+
+![array_deque-5](../Resources/array_deque-5.png)
+
+
+### 4.3.3.4 removeLast()
++ Simply decrease `size` by 1.
+
+
 ## 4.3.4 Implementing a Deque with a Doubly Linked List
 + the `DoublyLinkedList` class from [Section 3.3](DoubleList.md) already implements the entire Deque interface.
 + See code [here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/ListDeque.java)
