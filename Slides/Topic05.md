@@ -5,9 +5,11 @@
 # Topic 5: Recursion
 
 # 1. The Recursion Pattern
-+ `Recursion`: when a method calls itself
++ `Recursion`: The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called a recursive function.
++ Using a recursive algorithm, certain problems can be solved quite easily. Examples of such problems are `Towers of Hanoi (TOH)`, `Inorder/Preorder/Postorder Tree Traversals`, `DFS of Graph`, etc.
++ A recursive function solves a particular problem by calling a copy of itself and solving smaller subproblems of the original problems. 
++ Recursion is an amazing technique with the help of which we can reduce the length of our code and make it easier to read and write. It has certain advantages over the iteration technique which will be discussed later. A task that can be defined with its similar subtask, recursion is one of the best solutions for it. For example; The Factorial of a number.
 + Classic example – the factorial function:
-
 ~~~~
 n! = n*(n-1)*(n-2)*....*2*1
 ~~~~
@@ -58,18 +60,25 @@ n! = n*(n-1)*(n-2)*....*2*1
 
 + Recursive algorithm(binary recursive method)
 
-~~~~
-Algorithm: Fibonacci(n):
-  Input: non-negative integer n
-  Output: the nth Fibonacci number Fn
-  if n=0 or n=1 then
-    return n
-  else
-    return Fibonacci(n-1) + Fibonacci(n-2)
-~~~~
+![fibonacci](../Resources/fibonacci.png)
 
-# 5. Recursive Issues
+# 5. Advantages of Recursion
++ Recursion provides a clean and simple way to write code.
++ Some problems are inherently recursive like tree traversals, Tower of Hanoi, etc. For such problems, it is preferred to write recursive code.
 
-![Recursive Issues](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgL7qjMSKVvgITDfi4PqHmwNPZNm6pVfLNR9Nytb7oIXZWiunsO_XSZkyoexQErYgxpDk&usqp=CAU)
+# 6. Disadvantages of Recursion
++ The recursive program has greater space requirements as all functions will remain in the stack until the base case is reached.
++ It also has greater time requirements because of function calls and returns overhead.
++ Moreover, due to the smaller length of code, the codes are difficult to understand and hence extra care has to be practiced while writing the code. The computer may run out of memory if the recursive calls are not properly checked.
+
+
+![Recursive Issues](https://www.andrew.cmu.edu/course/15-121/lectures/Recursions/pix/fib.bmp)
+
+# 7. A better Fibonacci Algorithm: linear recursion
++ Please note that in the following algorithm description, `Fn`, `Fn-1`, and `Fn-2` are three variable names.  
+
+![linear_fibonacci](../Resources/linear_fibonacci.png)
+
+
 
 
