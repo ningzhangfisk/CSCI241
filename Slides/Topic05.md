@@ -46,7 +46,13 @@ n! = n*(n-1)*(n-2)*....*2*1
   - `target` > `data[mid]`
 
 + Analyze binary search
-  - Each recursive call divides the search region  in hafl. Hence, there can be at most `log(n)` levels.(We will learn the details in next topic)
+  - Each recursive call divides the search region  in half. Hence, there can be at most `log(n)` levels.(We will learn the details in next topic)
 
-
+# 4. Fibonacci Numbers
++ Fibonacci numbers are defined recursively:
+$$
+F_0 = 0
+F_1 = 1
+F_i = F_{i-1} + F_{i-2} for i>1
+$$
 
