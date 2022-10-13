@@ -56,9 +56,23 @@ n! = n*(n-1)*(n-2)*....*2*1
 
 # 4. Fibonacci Numbers
 + Fibonacci numbers are defined recursively:
-$$
-F_0 = 0
-F_1 = 1
-F_i = F_{i-1} + F_{i-2} for i>1
-$$
+
+![fibonacci](http://jwilson.coe.uga.edu/EMAT6680Su07/Brown/Assignment%2012/image62.gif)
+
++ Recursive algorithm(binary recursive method)
+
+~~~~
+Algorithm: Fibonacci(n):
+  Input: non-negative integer n
+  Output: the nth Fibonacci number Fn
+  if n=0 or n=1 then
+    return n
+  else
+    return Fibonacci(n-1) + Fibonacci(n-2)
+~~~~
+
+# 5. Recursive Issues
+
+![Recursive Issues](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgL7qjMSKVvgITDfi4PqHmwNPZNm6pVfLNR9Nytb7oIXZWiunsO_XSZkyoexQErYgxpDk&usqp=CAU)
+
 
