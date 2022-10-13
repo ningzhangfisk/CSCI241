@@ -52,8 +52,19 @@ n! = n*(n-1)*(n-2)*....*2*1
 
 + Analyze binary search
   - Each recursive call divides the search region  in half. Hence, there can be at most `log(n)` levels.(We will learn the details in next topic)
+# 4. Linear Recursion vs. Binary Recursion
+## 4.1 Linear Recursion
++ Test for base cases
+  - Begin by testing for a set of base cases(at least one)
+  - Every possible chain of recursive calls must eventually reach a base case, and the handling of each base case should not use  recursion.
++ Recur once
+  - Perform a single recursive call
+  - This step may have a test that decides which of several possible recursive calls to make. But it should ultimately make just one of these calls.
+  - Define each possible recursive call so that it makes progress towards a base case.
+## 4.2 Binary Recursion
++ Binary recursion occurs whenever there a recursive calls for each non-base case.
 
-# 4. Fibonacci Numbers
+# 5. Fibonacci Numbers
 + Fibonacci numbers are defined recursively:
 
 ![fibonacci](http://jwilson.coe.uga.edu/EMAT6680Su07/Brown/Assignment%2012/image62.gif)
@@ -62,11 +73,11 @@ n! = n*(n-1)*(n-2)*....*2*1
 
 ![fibonacci](../Resources/fibonacci.png)
 
-# 5. Advantages of Recursion
+# 6. Advantages of Recursion
 + Recursion provides a clean and simple way to write code.
 + Some problems are inherently recursive like tree traversals, Tower of Hanoi, etc. For such problems, it is preferred to write recursive code.
 
-# 6. Disadvantages of Recursion
+# 7. Disadvantages of Recursion
 + The recursive program has greater space requirements as all functions will remain in the stack until the base case is reached.
 + It also has greater time requirements because of function calls and returns overhead.
 + Moreover, due to the smaller length of code, the codes are difficult to understand and hence extra care has to be practiced while writing the code. The computer may run out of memory if the recursive calls are not properly checked.
@@ -74,7 +85,7 @@ n! = n*(n-1)*(n-2)*....*2*1
 
 ![Recursive Issues](https://www.andrew.cmu.edu/course/15-121/lectures/Recursions/pix/fib.bmp)
 
-# 7. A better Fibonacci Algorithm: linear recursion
+# 8. A better Fibonacci Algorithm: linear recursion
 
 ![linear_fibonacci](../Resources/linear_fibonacci.png)
 
