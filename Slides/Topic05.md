@@ -75,10 +75,14 @@ n! = n*(n-1)*(n-2)*....*2*1
 ![Recursive Issues](https://www.andrew.cmu.edu/course/15-121/lectures/Recursions/pix/fib.bmp)
 
 # 7. A better Fibonacci Algorithm: linear recursion
-+ Please note that in the following algorithm description, `Fn`, `Fn-1`, and `Fn-2` are three variable names.  
 
 ![linear_fibonacci](../Resources/linear_fibonacci.png)
 
 
 
+# 8. Designing Recursive Algorithms
+An algorithm that uses recursion typically has the following form:
++ `Test for base cases`. We begin by testing for a set of base cases (there should be at least one). These base cases should be defined so that every possible chain of recursive calls will eventually reach a base case, and the handling of each base case should not use recursion.
++ `Recur`. If not a base case, we perform one or more recursive calls. This recur- sive step may involve a test that decides which of several possible recursive calls to make. We should define each possible recursive call so that it makes progress towards a base case.
 
+In our lab this Friday, We will use the application of `Tower of Hanoi` as an example to show you how to design a recursive algorithm.
