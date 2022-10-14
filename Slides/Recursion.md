@@ -10,7 +10,8 @@ Tower of Hanoi is a mathematical puzzle where we have three rods (`A`, `B`, and 
 
 ~~~~
 Input: 2
-Output: Disk 1 moved from A to B
+Output: 
+Disk 1 moved from A to B
 Disk 2 moved from A to C
 Disk 1 moved from B to C
 ~~~~
@@ -18,7 +19,8 @@ Disk 1 moved from B to C
 
 ~~~~
 Input: 3
-Output: Disk 1 moved from A to C
+Output: 
+Disk 1 moved from A to C
 Disk 2 moved from A to B
 Disk 1 moved from C to B
 Disk 3 moved from A to C
@@ -42,7 +44,7 @@ Follow the steps below to solve the problem:
 + Call `towerOfHanoi` to move the `N – 1` disks from `aux_rod` to `to_rod`.
 
 ~~~~~
-static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
+    static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
     {
         if (n == 0) {
             return;
@@ -54,7 +56,7 @@ static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
         towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
     }
  
-    // Driver code
+    // test code
     public static void main(String args[])
     {
         int N = 3;
@@ -63,3 +65,5 @@ static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
         towerOfHanoi(N, 'A', 'C', 'B');
     }
 ~~~~~
+
+
