@@ -51,7 +51,7 @@ Follow the steps below to solve the problem:
 
 ![maze](../Resources/maze.png)
 
-+ A Maze is given as `M*N` binary matrix of blocks.
++ A Maze is given as `M*N` matrix of blocks.
 + Source block is at `maze[i][j]` and destination block is at `maze[M-2][N-2]`. 
 + We need to find a path from source to the destination. 
 + We can move in four directions: left, right, up and down.
