@@ -30,7 +30,7 @@ Disk 1 moved from A to C
 ~~~~
 
 ## 1.3 Tower of Hanoi using Recursion:
-The idea is to use the helper node to reach the destination using recursion. Below is the pattern for this problem:
+The idea is to use the helper node/auxiliary rod to reach the destination using recursion. Below is the pattern for this problem:
 + Shift `N-1` disks from `A` to `B`, using `C`.
 + Shift last disk from `A` to `C`.
 + Shift `N-1` disks from `B` to `C`, using `A`.
@@ -43,27 +43,29 @@ Follow the steps below to solve the problem:
 + Move the last (Nth) disk  from `from_rod` to `to_rod`.
 + Call `towerOfHanoi` to move the `N – 1` disks from `aux_rod` to `to_rod`.
 
-~~~~~
-    static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
-    {
-        if (n == 0) {
-            return;
-        }
-        towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
-        System.out.println("Move disk " + n + " from rod "
-                           + from_rod + " to rod "
-                           + to_rod);
-        towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
-    }
- 
-    // test code
-    public static void main(String args[])
-    {
-        int N = 3;
- 
-        // A, B and C are names of rods
-        towerOfHanoi(N, 'A', 'C', 'B');
-    }
-~~~~~
+[See code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241L/Hanoi.java)
 
 
+# 2. Maze
+# 2.1 Game Description
+
+![maze](../Resources/maze.png)
+
++ A Maze is given as `M*N` binary matrix of blocks.
++ Source block is at `maze[i][j]` and destination block is at `maze[M-2][N-2]`. 
++ We need to find a path from source to the destination. 
++ We can move in four directions: left, right, up and down.
+
+## 2.2 Maze using Recursion:
+The idea is to suppose there exists a path from the current position (i,j) to the destination. Then move 
++ down (test if there exists a path from position (i+1,j) to the destination)
++ right (test if there exists a path from position (i,j+1) to the destination)
++ up (test if there exists a path from position (i-1,j) to the destination)
++ left (test if there exists a path from position (i,j-1) to the destination)
+
+Follow the steps below to solve the problem:
++ Create a function `isTherePath` where pass the `maze` (a 2d array to represent the maze), `i`, `j`.
++ if we have reached the destination(found the path), return true
++ else we move in different directions.
+
+[See code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241L/Maze.java)
