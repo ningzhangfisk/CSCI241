@@ -69,3 +69,6 @@ Follow the steps below to solve the problem:
 + else we move in different directions.
 
 [See code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241L/Maze.java)
+
+## 2.3 Discussion
++ The path we find is related to the order of moving directions. (You can try to use `up->right->down->left` or any other order to check if we can find different paths.)
