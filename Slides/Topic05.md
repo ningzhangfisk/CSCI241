@@ -33,6 +33,7 @@ n! = n*(n-1)*(n-2)*....*2*1
   
 ![factorial recursion](https://bigaidream.gitbooks.io/subsets-of-algorithms/content/basic_algo/recursion/etc/factorial_flowchart.PNG)
 
++ [See code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/Recursion.java)
 # 3. Binary search
 + Search for an integer in an ordered array.
 + We consider four cases:
@@ -52,6 +53,8 @@ n! = n*(n-1)*(n-2)*....*2*1
 
 + Analyze binary search
   - Each recursive call divides the search region  in half. Hence, there can be at most `log(n)` levels.(We will learn the details in next topic)
+
++ [See code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/Recursion.java)
 # 4. Linear Recursion vs. Binary Recursion
 ## 4.1 Linear Recursion
 + Test for base cases
@@ -73,6 +76,7 @@ n! = n*(n-1)*(n-2)*....*2*1
 
 ![fibonacci](../Resources/fibonacci.png)
 
++ [See code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/Recursion.java)
 # 6. Advantages of Recursion
 + Recursion provides a clean and simple way to write code.
 + Some problems are inherently recursive like tree traversals, Tower of Hanoi, etc. For such problems, it is preferred to write recursive code.
