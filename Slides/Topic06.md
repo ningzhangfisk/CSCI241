@@ -11,3 +11,5 @@
 # 6.4 Induction
 
 [See slides here](6.4.pdf)
+
+If you need to learn more about induction, [see slides here](induction.pdf)
