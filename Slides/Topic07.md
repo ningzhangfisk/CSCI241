@@ -98,4 +98,46 @@ Trees can be applied to many things. The hierarchical structure gives a tree uni
 
 [binary Trees](binarytrees.md)
 
+## 7.4 Tree Traversal Algorithms
++ traversal of a tree T is a systematic way of accessing, or “visiting,” all the posi- tions of T . The specific action associated with the “visit” of a position p depends on the application of this traversal, and could involve anything from increment- ing a counter to performing some complex computation for p.
 
+### 7.4.1 Preorder Traversals
++ In a preorder traversal of a tree T , the root of T is visited first and then the sub- trees rooted at its children are traversed recursively. If the tree is ordered, then the subtrees are traversed according to the order of the children
+
+~~~~
+Algorithm preorder(p):
+	perform the “visit” action for position p { this happens before any recursion }
+	for each child c in children(p) do
+		preorder(c)			{ recursively traverse the subtree rooted at c }
+~~~~
+
+![preorder](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree06.png)
+
+### 7.4.2 Postorder Traversals
++ postorder traversal. In some sense, this algorithm can be viewed as the opposite of the preorder traversal, be- cause it recursively traverses the subtrees rooted at the children of the root first, and then visits the root
+
+~~~~
+Algorithm postorder(p):
+	for each child c in children(p) do
+		postorder(c) { recursively traverse the subtree rooted at c }
+	perform the “visit” action for position p { this happens after any recursion }
+
+~~~~
+
+![postorder](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree07.png)
+
+
+### 7.4.3 Inorder Traversals
++ The standard preorder, postorder, and breadth-first traversals that were introduced for general trees can be directly applied to binary trees. In this section, we will introduce another common traversal algorithm specifically for a binary tree.
++ During an inorder traversal, we visit a position between the recursive traver- sals of its left and right subtrees. The inorder traversal of a binary tree T can be informally viewed as visiting the nodes of T “from left to right.” Indeed, for every position p, the inorder traversal visits p after all the positions in the left subtree of p and before all the positions in the right subtree of p.
+
+~~~~
+Algorithm inorder(p):
+	if p has a left child lc then
+		inorder(lc) { recursively traverse the left subtree of p }
+	perform the “visit” action for position p
+	if p has a right child rc then
+		inorder(rc) { recursively traverse the right subtree of p }
+~~~~
+
+![inorder](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree08.png)
