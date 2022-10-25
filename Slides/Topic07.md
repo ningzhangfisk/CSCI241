@@ -67,8 +67,32 @@ Trees can be applied to many things. The hierarchical structure gives a tree uni
 ![ordered tree](https://courses.engr.illinois.edu/cs225/sp2019/assets/notes/bst/bsttreetraversal.png)
 
 ## 7.2 General Trees
+### Node
++ A node consists of 
+  - an element
+  - a parent
+  - severl children
 
-[General Trees](generaltrees.md)
+![tree node](../Resources/treenode.png)
+
+### The Tree Abstract Data Type
++ The tree ADT then supports the following **accessor methods**
+  - root(): Returns the position of the root of the tree (or null if empty).
+  - parent(p): Returns the position of the parent of node p (or null if p is the root).
+  - children(p): Returns an iterable collection containing the children of node p (if any). If a tree T is ordered, then children(p) reports the children of p in order.
+  - numChildren(p): Returns the number of children of position p.
++ a tree supports the following **query methods**
+  - isInternal(p): Returns true if node p has at least one child.
+  - isExternal(p): Returns true if node p does not have any children.
+  - isRoot(p): Returns true if node p is the root of the tree.
++ Trees support a number of more **general methods**
+  - size(): Returns the number of nodes (and hence elements)
+  - isEmpty(): Returns true if the tree does not contain any nodes
+  - iterator(): Returns an iterator for all elements in the tree
+  - positions(): Returns an iterable collection of all positions of the tree.
+
++ We do not define any methods for creating or modifying trees at this point. We prefer to describe different tree update methods in conjunction with specific implementations of the tree interface, and specific applications of trees.
+
 
 ## 7.3 Binary Trees
 
