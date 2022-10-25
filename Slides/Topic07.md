@@ -91,6 +91,17 @@ Trees can be applied to many things. The hierarchical structure gives a tree uni
   - iterator(): Returns an iterator for all elements in the tree
   - positions(): Returns an iterable collection of all positions of the tree.
 
++ Computing Depth Of The Tree
+	- Let p be a position within tree T . The depth of p is the number of ancestors of p, other than p itself. For example, in the tree of Figure below, the node storing International has depth 2. Note that this definition implies that the depth of the root of T is 0. The depth of p can also be recursively defined as follows:
+		+ If p is the root, then the depth of p is 0.
+		+ Otherwise, the depth of p is one plus the depth of the parent of p.
+
+![depth of a tree](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree01.png)
+
++ Computing Height Of The Tree
+	- We next define the height of a tree to be equal to the maximum of the depths of its positions (or zero, if the tree is empty). For example, the tree above has height 4, as the node storing Africa (and its siblings) has depth 4. It is easy to see that the position with maximum depth must be a leaf.
+
+
 + We do not define any methods for creating or modifying trees at this point. We prefer to describe different tree update methods in conjunction with specific implementations of the tree interface, and specific applications of trees.
 
 
