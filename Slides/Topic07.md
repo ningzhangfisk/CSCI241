@@ -9,6 +9,12 @@
 
 ![tree1](../Resources/tree1.png)
 
+### Formal Definition of Tree
++ Formally, we define a `tree T` as a set of `nodes` storing elements such that the nodes have a `parent-child` relationship that satisfies the following properties:
+  - If T is nonempty, it has a special node, called the `root` of T , that has no parent.
+  - Each node v of T different from the root has a unique `parent` node w; every node with parent w is a `child` of w.
++ Note that according to our definition, a tree can be empty, meaning that it does not have any nodes. This convention also allows us to define a tree recursively such that a tree T is either empty or consists of a node r, called the root of T, and a (possibly empty) set of subtrees whose roots are the children of r.
+
 ## 7.1.2 Recursive Definition: 
 + A tree consists of a root, and zero or more subtrees T1, T2, … , Tk such that there is an edge from the root of the tree to the root of each subtree.
 
@@ -43,3 +49,7 @@ The data in a tree are not stored in a sequential manner i.e, they are not store
   - It has no loop and no circuit
   - It has no self-loop 
   - Its hierarchical model.
+
+### Ordered Trees
+
++ A tree is `ordered` if there is a meaningful linear order among the children of each node; that is, we purposefully identify the children of a node as being the first, second, third, and so on. Such an order is usually visualized by arranging siblings left to right, according to their order.
