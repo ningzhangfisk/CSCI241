@@ -45,4 +45,3 @@
   - `remove(p)`: Removes the node at position p, replacing it with its child (if any), and returns the element that had been stored at p; an error occurs if p has two children.
 
 See code [here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/LinkedBinaryTree.java)
-
