@@ -7,7 +7,7 @@
 + The subtree rooted at a left or right child of an internal node v is called a `left subtree` or `right subtree`, respectively, of v.
 + A binary tree is `proper` if each node has either zero or two children. Some people also refer to such trees as being full binary trees. Thus, in a proper binary tree, every internal node has exactly two children. A binary tree that is not proper is `improper`.
 + Example 1: An important class of binary trees arises in contexts where we wish to represent a number of different outcomes that can result from answering a series of yes-or-no questions.
-![binary tree 1]([https://miro.medium.com/max/1024/1*EFCePNEkqoGmxm5qR-nqrA.gif](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree03.png))
+![binary tree 1](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree03.png)
 
 + Example 2: An arithmetic expression can be represented by a binary tree whose leaves are associated with variables or constants, and whose internal nodes are associated with one of the operators 
 
