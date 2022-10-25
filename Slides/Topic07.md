@@ -107,7 +107,7 @@ Trees can be applied to many things. The hierarchical structure gives a tree uni
 
 ## 7.3 Binary Trees
 
-[binary Trees](binarytrees.md)
+[See slides here: binary Trees](binarytrees.md)
 
 ## 7.4 Tree Traversal Algorithms
 + traversal of a tree T is a systematic way of accessing, or “visiting,” all the posi- tions of T . The specific action associated with the “visit” of a position p depends on the application of this traversal, and could involve anything from increment- ing a counter to performing some complex computation for p.
