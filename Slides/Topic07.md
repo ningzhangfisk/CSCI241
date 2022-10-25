@@ -76,6 +76,7 @@ Trees can be applied to many things. The hierarchical structure gives a tree uni
 ![tree node](../Resources/treenode.png)
 
 ### The Tree Abstract Data Type
+Note that `node` and `position` are used interchangably for a tree.
 + The tree ADT then supports the following **accessor methods**
   - root(): Returns the position of the root of the tree (or null if empty).
   - parent(p): Returns the position of the parent of node p (or null if p is the root).
