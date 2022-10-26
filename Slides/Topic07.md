@@ -125,6 +125,15 @@ Algorithm preorder(p):
 		preorder(c)			{ recursively traverse the subtree rooted at c }
 ~~~~
 
++ For a binary tree.
+
+~~~~
+Algorithm preorder(p in binary tree):
+	Visit the root.
+	Traverse the left subtree, i.e., call preorder(p.left)
+	Traverse the right subtree, i.e., call preorder(p.right) 
+~~~~
+
 
 ### 7.4.2 Postorder Traversals
 + postorder traversal. In some sense, this algorithm can be viewed as the opposite of the preorder traversal, because it recursively traverses the subtrees rooted at the children of the root first, and then visits the root
@@ -135,6 +144,15 @@ Algorithm postorder(p):
 		postorder(c) { recursively traverse the subtree rooted at c }
 	perform the “visit” action for position p { this happens after any recursion }
 
+~~~~
+
++ For a binary tree.
+
+~~~~
+Algorithm postorder(p in binary tree):
+	Traverse the left subtree, i.e., call postorder(p.left)
+	Traverse the right subtree, i.e., call postorder(p.right) 
+	Visit the root.
 ~~~~
 
 
@@ -152,3 +170,14 @@ Algorithm inorder(p):
 		inorder(rc) { recursively traverse the right subtree of p }
 ~~~~
 
+
++ For a binary tree.
+
+~~~~
+Algorithm inorder(p in binary tree):
+	Traverse the left subtree, i.e., call inorder(p.left)
+	Visit the root.
+	Traverse the right subtree, i.e., call inorder(p.right) 	
+~~~~
+
+See code [here.](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/LinkedBinaryTree.java)
