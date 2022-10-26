@@ -111,7 +111,8 @@ Note that `node` and `position` are used interchangably for a tree.
 [See slides here: binary Trees](binarytrees.md)
 
 ## 7.4 Tree Traversal Algorithms
-+ traversal of a tree T is a systematic way of accessing, or “visiting,” all the posi- tions of T . The specific action associated with the “visit” of a position p depends on the application of this traversal, and could involve anything from incrementing a counter to performing some complex computation for p.
++ Traversal of a tree T is a systematic way of accessing, or “visiting,” all the positions of T . The specific action associated with the “visit” of a position p depends on the application of this traversal, and could involve anything from incrementing a counter to performing some complex computation for p.
++ Note that in a binary tree, **A left child precedes a right child in the order of children of a node.**
 
 ![Tree Traversal Algorithms](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Preorder-from-Inorder-and-Postorder-traversals.jpg)
 ### 7.4.1 Preorder Traversals
