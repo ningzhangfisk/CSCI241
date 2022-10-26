@@ -113,6 +113,7 @@ Note that `node` and `position` are used interchangably for a tree.
 ## 7.4 Tree Traversal Algorithms
 + traversal of a tree T is a systematic way of accessing, or “visiting,” all the posi- tions of T . The specific action associated with the “visit” of a position p depends on the application of this traversal, and could involve anything from incrementing a counter to performing some complex computation for p.
 
+![Tree Traversal Algorithms](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Preorder-from-Inorder-and-Postorder-traversals.jpg)
 ### 7.4.1 Preorder Traversals
 + In a preorder traversal of a tree T , the root of T is visited first and then the subtrees rooted at its children are traversed recursively. If the tree is ordered, then the subtrees are traversed according to the order of the children
 
@@ -123,7 +124,6 @@ Algorithm preorder(p):
 		preorder(c)			{ recursively traverse the subtree rooted at c }
 ~~~~
 
-![preorder](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree06.png)
 
 ### 7.4.2 Postorder Traversals
 + postorder traversal. In some sense, this algorithm can be viewed as the opposite of the preorder traversal, because it recursively traverses the subtrees rooted at the children of the root first, and then visits the root
@@ -136,7 +136,6 @@ Algorithm postorder(p):
 
 ~~~~
 
-![postorder](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree07.png)
 
 
 ### 7.4.3 Inorder Traversals
@@ -152,4 +151,3 @@ Algorithm inorder(p):
 		inorder(rc) { recursively traverse the right subtree of p }
 ~~~~
 
-![inorder](https://sbme-tutorials.github.io/2020/data-structure-FALL/images/Tree08.png)
