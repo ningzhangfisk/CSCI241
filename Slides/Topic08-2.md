@@ -129,5 +129,7 @@ h(x) = h2(h1(x))
   - Suitable for numeric keys of fixed length greater than or equal to the number of bits of the integer type (e.g., long and double in Java)
 
 + Polynomial Accumulation:
-  - We partition the bits of the key into a sequence of components of fixed length(e.g., 8, 16, or 32)
-  - 
+  - We partition the bits of the key into a sequence of components of fixed length(e.g., 8, 16, or 32): a<sub>0</sub>
+
+  
+ 
