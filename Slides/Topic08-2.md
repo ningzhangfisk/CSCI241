@@ -11,7 +11,7 @@
 
 + Note: Maps provide an alternative approach to searching
 
-## Map ADT/Operations
+## 8.1.1 Map ADT/Operations
 + size()
 + isEmpty()
 + get(k):if M contains an entry with key k, return it; else return null(this can be viewed as searching for key k)
@@ -21,7 +21,7 @@
   - (this can be viewed as inserting key k)
 + remove(k): remove entry (k,\*) from M (this can be viewed as deleting key k)
 
-## Map example
+## 8.1.2 Map example
 **(k,v)   key=integer, value=letter**
 ~~~~~
               M={}
@@ -38,14 +38,14 @@ remove(2)     M={(7,B), (8,D)}
 get(2)        return null
 ~~~~~
 
-## Map Implemention
+## 8.1.3 Map Implemention
 + Arrays (Vector, ArrayList)
 + **Linked-list**
 + Binary search trees
 + Hash tables
 
 
-## A LinkedList implementation of Maps
+### A LinkedList implementation of Maps
 + store the (k,v) pairs in a doubly linked list
 + get(k): hop through the list until find the element with key k
 + put(k,v):
@@ -71,20 +71,20 @@ get(2)        return null
 + rather than navigating through a dictionary data structure comparing the search key with the elements,  hashing tries to reference an element in a table directly based on its key
 + hashing transforms a key into a table address
 
-## Intuitive Notion of a Map
+## 8.2.1 Intuitive Notion of a Map
 + Intuitively, a map M supports the abstraction of using keys as indices with a syntax suck as `M[k]`.
 + As a mental warm-up, consider a restricted setting in which a map  with n items uses keys that are known to be integers in a range from 0 to N-1, for some N>=n.
 
 ![intuitive notion](../Resources/intuitivemap.png)
 
-## More General Kinds of Keys
+## 8.2.2 More General Kinds of Keys
 + But what should we do if the keys are not integers from 0 to N-1?
   - use a `hash function` to map general keys to corresponding indices in a table
   - For instance, the last 4 digits of a social security number
 
 ![ssn](../Resources/ssn.png)
 
-## Hash Functions and Hash Tables
+## 8.2.3 Hash Functions and Hash Tables
 + A hash function `h` maps keys of a given type to integers in a fixed interval `[0,N-1]`.
 + Example: `h(x) = x mod N` is a hash function for integer keys.
 + The integer `h(x)` is called the `hash value` of key x.
@@ -99,7 +99,7 @@ get(2)        return null
 
 ![ssn2](../Resources/ssn2.png)
 
-## Hash Functions
+### 8.2.3.1 Hash Functions
 + A hash function is usually specified as the composition of two functions
 
 ~~~~
@@ -130,7 +130,35 @@ h(x) = h2(h1(x))
 
 + Polynomial Accumulation:
   - We partition the bits of the key into a sequence of components of fixed length(e.g., 8, 16, or 32): a<sub>0</sub>a<sub>1</sub> ... a<sub>n-1</sub>
-  - We evaluate the polynomial p(z) = a<sub>0</sub> + a<sub>1</sub>z + a<sub>2</sub>z<sup>2</sup> ... + a<sub>n-1</sub>z<sup>n-1</sup>
+  - We evaluate the polynomial p(z) = a<sub>0</sub> + a<sub>1</sub>z + a<sub>2</sub>z<sup>2</sup> ... + a<sub>n-1</sub>z<sup>n-1</sup> at a fixed value z, ignoring overflows.
+  - Especially suitable for strings (e.g., the choice z=33 gives at most 6 collisions on a set of 50,000 english words)
+  - Polynomial p(z) can be evaluated in O(n) time using Horner's rule.
+### Compression Functions
++ `Division`
+  - `h2(y) = y mod N`
+  - The size N of the hash table is usually chosen to be a prime
+  - The reason has to do with number theory and is beyond the scope of this course.
++ `Multipy, And, Divide(MAD)`:
+  - `h2(y) = ay+b mod N`
+  - `a` and `b` are non-negative integers such that `a mod N is NOT equal to 0`
+  - Otherwise, every integer would map to the same value `b`
 
-  
- 
+## 8.2.4 Collision Handling
++ Collisions occur when different elements are mapped to the same cell. 
+
+![ssn3](../Resources/ssn3.png)
+
+### Separate Chaining
++ Let each cell in the table point to a linked list of entries that map there
++ Separate chaining is simple, but requires additional memory outside the table.
+
+### Linear Probing
++ `open addressing`: the collision item is placed in a different cell of the table
++ `linear probling`: handles collision by placing the collison item in the next (circularly) available table cell
+  - Each table cell inspected is referred to as a `probe`
+  - Colliding items lump together, causing future collisions to cause longer sequence of probes
+  - Example: `h(x) = x mod 13`, then insert keys 18, 41, 22, 44,  59, 32, 31, 73, in this order
+
+![linearprobing](../Resources/linearprobing.png)
+
+
