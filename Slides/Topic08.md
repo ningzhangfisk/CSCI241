@@ -14,12 +14,12 @@
 ## 8.1.1 Map ADT/Operations
 + size()
 + isEmpty()
-+ get(k):if M contains an entry with key k, return it; else return null(this can be viewed as searching for key k)
++ get(k):if the map M has an entry associated value; else, return null
 + put(k,v):
-  - if M does not have an entry with key k,  add entry (k,v) and return null
+  - if the map M does not have an entry with key k,  add entry (k,v) and return null
   - else replace existing value of entry with v  and return the old value
   - (this can be viewed as inserting key k)
-+ remove(k): remove entry (k,\*) from M (this can be viewed as deleting key k)
++ remove(k): if the map M has an entry with key k, remove it from M and return its associative value; else return null.
 
 ## 8.1.2 Map example
 **(k,v)   key=integer, value=letter**
@@ -46,6 +46,9 @@ get(2)        return null
 
 
 ### A LinkedList implementation of Maps
+
+![listmap](../Resources/listmap.png)
+
 + store the (k,v) pairs in a doubly linked list
 + get(k): hop through the list until find the element with key k
 + put(k,v):
