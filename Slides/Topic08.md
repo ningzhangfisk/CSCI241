@@ -14,7 +14,7 @@
 ## 8.1.1 Map ADT/Operations
 + size()
 + isEmpty()
-+ get(k):if the map M has an entry associated value; else, return null
++ get(k):if the map M has an entry with key k, return its associated value; else, return null
 + put(k,v):
   - if the map M does not have an entry with key k,  add entry (k,v) and return null
   - else replace existing value of entry with v  and return the old value
