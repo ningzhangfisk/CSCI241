@@ -68,6 +68,9 @@ get(2)        return null
     + the unsorted list implementation is effective only for maps of small size or maps in which puts are the most common operations, while searches and removals are rarely performed.
   - Hash tables: we’ll see that (under some assumptions)  search, insert, delete:  O(1)
 
++ Code
+  - [LinkedMap.java in our class](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/LinkedMap.java)
+  - [UnsortedTableMap.java in Textbook](https://replit.com/@ZhangNing1/CSCI241NingZhang#net/datastructures/UnsortedTableMap.java)
 
 # 8.2 Hash Tables/Hashing
 + A completely different approach to searching from the comparison-based methods (binary search, binary search trees)
