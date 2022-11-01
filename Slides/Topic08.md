@@ -158,6 +158,8 @@ h(x) = h2(h1(x))
 + Let each cell in the table point to a linked list of entries that map there
 + Separate chaining is simple, but requires additional memory outside the table.
 
+![hashChaining1](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2015/07/hashChaining1.png)
+
 ### Linear Probing
 + `open addressing`: the collision item is placed in a different cell of the table
 + `linear probling`: handles collision by placing the collison item in the next (circularly) available table cell
