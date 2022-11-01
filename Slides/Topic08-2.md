@@ -161,4 +161,76 @@ h(x) = h2(h1(x))
 
 ![linearprobing](../Resources/linearprobing.png)
 
++ `Search with Linear Probing`
+  - Consider a hash table A using linear probing
+  - get(k): 
+    + we start at cell `h(k)`
+    + we probe consecutive locations until one of the following occurs
+      - At item with key `k` is found or
+      - An empty cell is found or
+      - N cells have been unsuccessfully probed
 
+   ~~~~
+   Algorithm get(k):
+    i <- h(k)
+    p <- 0
+    repeat
+      c <- A[i]
+      if c = Ø
+        return null
+      else if c.getKey()=k
+        return c.getValue()
+      else
+        i <- (i+1) mod N
+        p <- p+1
+     until p=N
+     return null
+   ~~~~
+
++ `Updates with Linear Probing`
+  - To handle insertions and deletions, we introduce a special object, called `DEFUNCT`, which replaces deleted elements
+  - `Remove(k)`:
+    + we search for an entry with key `k`
+    + If such an entry `(k,o)` is found, we replace it with the special item `DEFUNCT` and return the element `o`
+    + Else, we return `null`
+
+  - `put(k,o)`:
+    + We throw an exception if the table is full.
+    + We start at cell `h(k)`
+    + We probe consecutive cells until one of the following occurs
+      - A cell `i` is found that is either empty or stores `DEFUNCT` or
+      - N cells have been unsuccessfully probed
+    + We store `(k,o)` in cell `i`
+
+### Double Hashing
++ Double hashing uses a secondary hash function `d(k)` and handles collisions by placing an item in the first available cell of the series: **(i + jd(k)) mod N for j = 0,1,...,N-1**
+
++ The second hash function `d(k)` can not have zero values
++ The table size `N` must be a prime to allow probing of all the cells
++ Common choice of compression function for the secondary hash function **d<sub>2</sub>(k) = q - k mod q** where
+  - q < n
+  - q is a prime
+
++ The possible values for d<sub>2</sub>(k) are `1, 2, ..., q`
+
++ Example of Double Hashing
+  - Consider a hash table storing integer keys that handles collision with double hashing
+    + N = 13
+    + h(k) = k mode 13
+    + d(k) = 7 - k mod 7
+
+  - Insert keys 18, 41, 22, 44, 59, 32, 31, 73, in this order
+
+![doublehashing](../Resources/doublehashing.png)
+
+## 8.2.5 Performance of Hashing
++ In the worst case, searches, insertions and removals on a hash table take O(n) time.
++ The worst case occurs when all the keys inserted into the map collide
++ The load factor `α = n/N` affects the performance of a hash table
++ Assume that the hash values are link random numbers, it can be shown that the expected number of probes for an insertion with open addressing is `1/(1-α)`
++ The expected running time of all the dictionary ADT operations in a hash table is `O(1)`
++ In practice, hashing is very fast provided by the load factor is not close to 100%
++ Applications of hash tables
+  - small databases
+  - compilers
+  - browser caches
