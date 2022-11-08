@@ -110,7 +110,7 @@ get(2)        return null
 
 ~~~~
 hash code: h1: keys -> integers
-compression function: h1: integers -> [0,N-1]
+compression function: h2: integers -> [0,N-1]
 ~~~~
 
 + The `hash code` is applied first, and the compression function is applied next on the result. 
