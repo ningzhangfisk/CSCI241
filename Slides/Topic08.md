@@ -97,7 +97,7 @@ get(2)        return null
 + A `hash table` for a given key consists of 
   - hash function `h`
   - Array(called table) of size N
-+ When implementing a map with a hash table, the goal is to store item `(k,o)` at index `i=h(k)`.
++ When implementing a map with a hash table, the goal is to store item `(k,v)` at index `i=h(k)`.
 
 + Example: 
   - We design a table for a map storing entries as `(ssn, name)`, where `ssn` is a nine-digit number
