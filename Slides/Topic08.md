@@ -199,16 +199,16 @@ h(x) = h2(h1(x))
   - To handle insertions and deletions, we introduce a special object, called `DEFUNCT`, which replaces deleted elements
   - `Remove(k)`:
     + we search for an entry with key `k`
-    + If such an entry `(k,o)` is found, we replace it with the special item `DEFUNCT` and return the element `o`
+    + If such an entry `(k,v)` is found, we replace it with the special item `DEFUNCT` and return the element `o`
     + Else, we return `null`
 
-  - `put(k,o)`:
+  - `put(k,v)`:
     + We throw an exception if the table is full.
     + We start at cell `h(k)`
     + We probe consecutive cells until one of the following occurs
       - A cell `i` is found that is either empty or stores `DEFUNCT` or
       - N cells have been unsuccessfully probed
-    + We store `(k,o)` in cell `i`
+    + We store `(k,v)` in cell `i`
 
 ### Double Hashing
 + Double hashing uses a secondary hash function `d(k)` and handles collisions by placing an item in the first available cell of the series: **(i + jd(k)) mod N for j = 0,1,...,N-1**
