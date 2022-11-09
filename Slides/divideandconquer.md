@@ -82,3 +82,6 @@ partition (arr[], low, high)
     return (i + 1)
 }
 ~~~~
+
+## Other Examples
++ LeetCode 0004, 0023, 0053, 0241, 0169, 0050, 0014
