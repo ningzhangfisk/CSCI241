@@ -54,10 +54,14 @@ The most difficult part of the greedy algorithm is not the solution of the probl
 
 #### Pseudocode
 ~~~~
-step 1: Sort the arrays g and s from smallest to largest, using the variables index_g and index_s to point to the initial position of g and s, respectively, and the variable res to save the result, initialized to 0.
+step 1: Sort the arrays g and s from smallest to largest, 
+        using the variables index_g and index_s to point to the initial position of g and s, respectively, 
+        and the variable res to save the result, initialized to 0.
 step 2: Compare each element g[index_g] and s[index_s].
-        2.1 If g[index_g] <= s[index_s], which means that the current cookie satisfies the current child's appetite, add 1 to the number of answers and move index_g and index_s to the right.
-        2.2 If g[index_g] > s[index_s], the current cookie does not satisfy the current child's appetite, move index_s to the right and determine if the next cookie will satisfy the current child's appetite.
+        2.1 If g[index_g] <= s[index_s], which means that the current cookie satisfies the current child's appetite, 
+            add 1 to the number of answers and move index_g and index_s to the right.
+        2.2 If g[index_g] > s[index_s], the current cookie does not satisfy the current child's appetite, 
+            move index_s to the right and determine if the next cookie will satisfy the current child's appetite.
 step 3: Output the answer res after traversal.
 ~~~~
 
@@ -74,9 +78,15 @@ step 3: Output the answer res after traversal.
 
 #### Pseudocode
 ~~~
-Step 1: All intervals are sorted in ascending order by `end<sub>i</sub>`, and then two variables are maintained, one is the end time of the current non-overlapping interval: `end_pos`, and the other is the number of non-overlapping intervals `count`. Initially, the end time `end_pos` is `end<sub>i</sub>` of the first interval, and count is 1.
+Step 1: All intervals are sorted in ascending order by `end<sub>i</sub>`, 
+        and then two variables are maintained, one is the end time of the current non-overlapping interval: `end_pos`, 
+        and the other is the number of non-overlapping intervals `count`. 
+        Initially, the end time `end_pos` is `end<sub>i</sub>` of the first interval, and count is 1.
 
 Step 2: Each interval is traversed in turn. For each interval: intervals[i].
-        If `end_pos <= intervals[i][0]`, i.e. `end_pos` is less than or equal to the starting position of the interval, then there is a non-overlapping interval, so that the number of non-overlapping intervals count is increased by 1 and `end_pos` is updated to the ending position `end<sub>i</sub>` of the new interval.
-Step 3: The answer is "the total number of intervals - the maximum number of non-overlapping intervals", i.e., len(intervals) - count.
+        If `end_pos <= intervals[i][0]`, i.e. `end_pos` is less than or equal to the starting position of the interval, 
+        then there is a non-overlapping interval, so that the number of non-overlapping intervals count is increased by 1
+        and `end_pos` is updated to the ending position `end<sub>i</sub>` of the new interval.
+Step 3: The answer is "the total number of intervals - the maximum number of non-overlapping intervals", 
+        i.e., len(intervals) - count.
 ~~~
