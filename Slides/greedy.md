@@ -81,7 +81,7 @@ step 3: Output the answer res after traversal.
 Step 1: All intervals are sorted in ascending order by `end_i`, 
         and then two variables are maintained, one is the end time of the current non-overlapping interval: `end_pos`, 
         and the other is the number of non-overlapping intervals `count`. 
-        Initially, the end time `end_pos` is `end<sub>i</sub>` of the first interval, and count is 1.
+        Initially, the end time `end_pos` is `end_i` of the first interval, and count is 1.
 
 Step 2: Each interval is traversed in turn. For each interval: intervals[i].
         If `end_pos <= intervals[i][0]`, i.e. `end_pos` is less than or equal to the starting position of the interval, 
