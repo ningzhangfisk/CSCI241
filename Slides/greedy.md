@@ -41,7 +41,7 @@ The most difficult part of the greedy algorithm is not the solution of the probl
 + **Greedy choice property**: Choose a metric according to the question and formulate a greedy strategy to select the "best/optimally choice" in the current state to obtain a locally optimal solution.
 + **Optimal substructure property**: According to the greedy strategy developed in the previous step, the local optimal solution and the optimal solution of the subproblem are combined to obtain the optimal solution of the original problem.
 
-## 1.5 Example
+## 1.5 Example 1
 [leetcode 455: Assign Cookies](https://leetcode.com/problems/assign-cookies/)
 
 ### 1.5.1 Solution
@@ -52,7 +52,7 @@ The most difficult part of the greedy algorithm is not the solution of the probl
 + Greedy choice: For the current child, satisfy this child's appetite with cookies of the smallest possible size.
 + Optimal substructure property: Under the above greedy strategy, the current child's greedy choice + the optimal solution to the subproblem of the remaining children is the global optimal solution. That is, under the greedy choice scheme, it is possible to make the maximum number of children that satisfy the appetite.
 
-#### Pseducode
+#### Pseudocode
 ~~~~
 step 1: Sort the arrays g and s from smallest to largest, using the variables index_g and index_s to point to the initial position of g and s, respectively, and the variable res to save the result, initialized to 0.
 step 2: Compare each element g[index_g] and s[index_s].
@@ -60,3 +60,23 @@ step 2: Compare each element g[index_g] and s[index_s].
         2.2 If g[index_g] > s[index_s], the current cookie does not satisfy the current child's appetite, move index_s to the right and determine if the next cookie will satisfy the current child's appetite.
 step 3: Output the answer res after traversal.
 ~~~~
+
+## 1.6 Example 2
+[leetcode 435: non-overlapping intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+
+### 1.6.1 Solutions
++ We can change the way we think about this problem. The original question requires that the minimum number of intervals be removed so that the remaining intervals do not overlap with each other. Put another way: "How to maximize the number of remaining npn-overlapping intervals". Then the answer becomes: "the total number of intervals - the maximum number of non-overlapping intervals". Our problem also becomes to find the maximum number of non-overlapping intervals among all intervals.
++ Considering the greedy algorithm, we should sort the intervals by the `end time (end<sub>i>/sub>)`. The interval with the earliest end time is selected each time, and then the interval with the most time left is selected.
+#### Here we solve the problem using the greedy algorithm in three steps
++ Convert problem: convert the original problem into: after selecting the interval with the earliest end time, the interval with the most time left is selected (subproblem)
++ Greedy choice: For each selection, the interval with the earliest end time is chosen. The interval selected in this way must be one of the intervals of the optimal solution of the original problem.
++ Optimal substructure property: Under the above greedy strategy, the optimal solution of the subproblem with the earliest interval of the current time + the most intervals selected in the remaining time is the global optimal solution. That is, under the greedy selection scheme, it is possible to maximize the number of non-overlapping intervals among all intervals.
+
+#### Pseudocode
+~~~
+Step 1: All intervals are sorted in ascending order by `end<sub>i</sub>`, and then two variables are maintained, one is the end time of the current non-overlapping interval: `end_pos`, and the other is the number of non-overlapping intervals `count`. Initially, the end time `end_pos` is `end<sub>i</sub>` of the first interval, and count is 1.
+
+Step 2: Each interval is traversed in turn. For each interval: intervals[i].
+        If `end_pos <= intervals[i][0]`, i.e. `end_pos` is less than or equal to the starting position of the interval, then there is a non-overlapping interval, so that the number of non-overlapping intervals count is increased by 1 and `end_pos` is updated to the ending position `end<sub>i</sub>` of the new interval.
+Step 3: The answer is "the total number of intervals - the maximum number of non-overlapping intervals", i.e., len(intervals) - count.
+~~~
