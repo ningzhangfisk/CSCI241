@@ -78,7 +78,7 @@ step 3: Output the answer res after traversal.
 
 #### Pseudocode
 ~~~
-Step 1: All intervals are sorted in ascending order by `end<sub>i</sub>`, 
+Step 1: All intervals are sorted in ascending order by `end_i`, 
         and then two variables are maintained, one is the end time of the current non-overlapping interval: `end_pos`, 
         and the other is the number of non-overlapping intervals `count`. 
         Initially, the end time `end_pos` is `end<sub>i</sub>` of the first interval, and count is 1.
@@ -86,7 +86,7 @@ Step 1: All intervals are sorted in ascending order by `end<sub>i</sub>`,
 Step 2: Each interval is traversed in turn. For each interval: intervals[i].
         If `end_pos <= intervals[i][0]`, i.e. `end_pos` is less than or equal to the starting position of the interval, 
         then there is a non-overlapping interval, so that the number of non-overlapping intervals count is increased by 1
-        and `end_pos` is updated to the ending position `end<sub>i</sub>` of the new interval.
+        and `end_pos` is updated to the ending position `end_i` of the new interval.
 Step 3: The answer is "the total number of intervals - the maximum number of non-overlapping intervals", 
         i.e., len(intervals) - count.
 ~~~
