@@ -3,7 +3,7 @@
 # 9.1 Brute Force
 [See slides here](bruteforce.md)
 # 9.2 Divide and Conquer
-[See slides here](bruteforce.md)
+[See slides here](divideandconquer.md)
 # 9.3 Greedy
 [See slides here](greedy.md)
 # 9.4 Back Tracking
