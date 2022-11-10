@@ -26,7 +26,7 @@ step 3: perform merge function.
     merge(array, left, mid, right)
 step 4: Stop
 ~~~~
-![merge sort]([https://www.programiz.com/sites/tutorial2program/files/merge-sort-example_0.png](https://media.geeksforgeeks.org/wp-content/uploads/20220722205737/MergeSortTutorial.png))
+![merge sort](https://media.geeksforgeeks.org/wp-content/uploads/20220722205737/MergeSortTutorial.png))
 
 
 ### 2.2 quick-sort
