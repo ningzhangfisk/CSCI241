@@ -211,7 +211,7 @@ h(x) = h2(h1(x))
     + We store `(k,v)` in cell `i`
 
 ### Double Hashing
-+ Double hashing uses a secondary hash function `d(k)` and handles collisions by placing an item in the first available cell of the series: **(i + jd(k)) mod N for j = 0,1,...,N-1**
++ Double hashing uses a secondary hash function `d(k)` and handles collisions by placing an item in the first available cell of the series: **(i + jd(k)) mod N for j = 0,1,...,N-1**, where i = h(k)
 
 + The second hash function `d(k)` can not have zero values
 + The table size `N` must be a prime to allow probing of all the cells
