@@ -8,6 +8,7 @@ This technique can be divided into the following three parts:
 ![Divide and Conquer](https://i.imgur.com/Gmt6i6F.png)
 
 ## 2. Examples
+[Complete the code here](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/DivideandConquer.java)
 ### 2.1 merge-sort
 To sort a sequence `S` with `n` elements using the three divide-and-conquer steps, the merge-sort algorithm proceeds as follows:
 + **Divide**: If S has zero or one element, return S immediately; it is already sorted. Otherwise (S has at least two elements), remove all the elements from S and put them into two sequences, S1 and S2, each containing about half of the elements of S; that is, S1 contains the first ⌊n/2⌋ elements of S, and S2 contains the remaining ⌈n/2⌉ elements.
