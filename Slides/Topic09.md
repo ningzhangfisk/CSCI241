@@ -4,9 +4,9 @@
 [See slides here](bruteforce.md)
 # 9.2 Divide and Conquer
 [See slides here](bruteforce.md)
-# 9.1 Greedy
+# 9.3 Greedy
 [See slides here](greedy.md)
-# 9.1 Back Tracking
+# 9.4 Back Tracking
 [See slides here](backtracking.md)
-# 9.1 Dynamic Programming
+# 9.5 Dynamic Programming
 [See slides here](dynamicprogramming.md)
