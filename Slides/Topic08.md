@@ -224,7 +224,7 @@ h(x) = h2(h1(x))
 + Example of Double Hashing
   - Consider a hash table storing integer keys that handles collision with double hashing
     + N = 13
-    + h(k) = k mode 13
+    + h(k) = k mod 13
     + d(k) = 7 - k mod 7
 
   - Insert keys 18, 41, 22, 44, 59, 32, 31, 73, in this order
