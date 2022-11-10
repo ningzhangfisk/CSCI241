@@ -231,6 +231,7 @@ h(x) = h2(h1(x))
 
 ![doublehashing](../Resources/doublehashing.png)
 
+[Code for Linear Probing and Double Hashing](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/CollisionHandling.java)
 ## 8.2.5 Performance of Hashing
 + In the worst case, searches, insertions and removals on a hash table take O(n) time.
 + The worst case occurs when all the keys inserted into the map collide
