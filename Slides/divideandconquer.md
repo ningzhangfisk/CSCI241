@@ -36,6 +36,7 @@ Quick sort picks an element as a pivot and partitions the given array around the
 + Always pick the last element as a pivot (implemented below)
 + Pick a random element as a pivot.
 + Pick median as the pivot.
+
 We divide `S` into subsequences, recur to sort each subsequence, and then combine the sorted subsequences by a simple concatenation. In particular, the quick-sort algorithm consists of the following three steps"
 + `Divide`: If S has at least two elements (nothing needs to be done if S has zero or one element), select a specific element `x` from S, which is called the pivot. As is common practice, choose the pivot `x` to be the last element in S. Remove all the elements from S and put them into three sequences:
   - L, storing the elements in S less than x
