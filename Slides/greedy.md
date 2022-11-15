@@ -70,7 +70,7 @@ step 3: Output the answer res after traversal.
 
 ### 1.6.1 Solutions
 + We can change the way we think about this problem. The original question requires that the minimum number of intervals be removed so that the remaining intervals do not overlap with each other. Put another way: "How to maximize the number of remaining non-overlapping intervals". Then the answer becomes: "the total number of intervals - the maximum number of non-overlapping intervals". Our problem also becomes to find the maximum number of non-overlapping intervals among all intervals.
-+ Considering the greedy algorithm, we should sort the intervals by the `end time (end<sub>i</sub>)`. The interval with the earliest end time is selected each time, and then the interval with the most time left is selected.
++ Considering the greedy algorithm, we should sort the intervals by the `end time` (end<sub>i</sub>). The interval with the earliest end time is selected each time, and then the interval with the most time left is selected.
 #### Here we solve the problem using the greedy algorithm in three steps
 + Convert problem: convert the original problem into: after selecting the interval with the earliest end time, the interval with the most time left is selected (subproblem)
 + Greedy choice: For each selection, the interval with the earliest end time is chosen. The interval selected in this way must be one of the intervals of the optimal solution of the original problem.
