@@ -90,3 +90,6 @@ Step 2: Each interval is traversed in turn. For each interval: intervals[i].
 Step 3: The answer is "the total number of intervals - the maximum number of non-overlapping intervals", 
         i.e., len(intervals) - count.
 ~~~
+
+### More examples
+LeetCode 0860, 0056, 0452, 0055, 0045, 0392, 0122, 0561, 1710, 1217, 1247, 1400, 0921, 1029, 1605, 0135, 0134, 0053, 0376, 0738, 0402, 0861, 0670.
