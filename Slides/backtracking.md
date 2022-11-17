@@ -23,14 +23,14 @@ Taking the example of solving the full permutation of `[1, 2, 3]`, we will expla
   - 2.2 Undo the selection of 3 as the last number, and then undo the selection of 1 as the middle number. Then select 3 as the middle number, then only 1 can be selected as the last number, i.e., the permutaion is [2, 3, 1].
 
 + 3). Undo 1 as the last number, undo 3 as the middle number, undo 2 as the first number, then select 3 as the first number
-  - 2.1 Select 1 as the middle number, you can only select 2 as the last number, i.e., `[3,1,2]`
-  - 2.2 Undo the selection of 2 as the last number, and then undo the selection of 1 as the middle number. Then select 2 as the middle number, then only 1 can be selected as the last number, i.e., the permutaion is [3, 2, 1].
+  - 3.1 Select 1 as the middle number, you can only select 2 as the last number, i.e., `[3,1,2]`
+  - 3.2 Undo the selection of 2 as the last number, and then undo the selection of 1 as the middle number. Then select 2 as the middle number, then only 1 can be selected as the last number, i.e., the permutaion is [3, 2, 1].
 
 To summarize the permuation backtracking process
 + The numbers that may appear on each position are enumerated in order, and the numbers that have appeared before cannot appear again for the next number to be selected.
 + For the position:
-  - 1. `Select an element`: Select an element from the list of available elements that has not appeared before.
-  - 2. `Recursive search`: Starting from the selected element, the remaining numbers are recursively searched one level at a time until **a boundary condition is encountered**, then no further search is performed.
+  - 1. `Select an element`: Select an element from the list of available elements that have not been selected before.
+  - 2. `Recursive search`: Starting from the selected element, the remaining numbers are recursively searched one level at a time until **a base condition is encountered**, then no further search is performed.
   - 3. `Undo selection`: Undo the previously selected element one layer at a time and move on to another branch of the search. Until all possible paths are completely traversed
 
 + For the above decision process, we can also use a decision tree to represent it as follows.
@@ -45,50 +45,49 @@ To summarize the permuation backtracking process
 
 
 +  Code
-
 ~~~~~
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();// store all the permutations
-        List<Integer> tempList = new ArrayList<>(); // store the current permutation
+        List<List<Integer>> permutations = new ArrayList<>();            // store all the permutations
+        List<Integer> curr_permutation = new ArrayList<>();              // store the current permutation
         // Arrays.sort(nums); // not necessary
-        backtrack(list, tempList, nums);
-        return list;
+        backtrack(permutations, curr_permutation, nums);
+        return permutations;
     }
 
-    private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums){
-        if(tempList.size() == nums.length){ // find a permuation (the condition is true)
-            list.add(new ArrayList<>(tempList)); // add the current permutation into list
+    private void backtrack(List<List<Integer>> permutations, List<Integer> curr_permutation, int [] nums){
+        if(curr_permutation.size() == nums.length){                      // find a permuation (the base condition is true)
+            permutations.add(new ArrayList<>(curr_permutation));         // add the current permutation into list
         } else{
-            for(int i = 0; i < nums.length; i++){ //enumerate all the elements we can select
-                if(tempList.contains(nums[i])) continue; // element already exists, skip
-                tempList.add(nums[i]);                   // select the element
-                backtrack(list, tempList, nums);      // backtracking search
-                tempList.remove(tempList.size() - 1);    // undo the selection
+            for(int i = 0; i < nums.length; i++){                        //enumerate all the elements we can select
+                if(curr_permutation.contains(nums[i])) continue;         // element already exists, skip
+                curr_permutation.add(nums[i]);                           // select the element
+                backtrack(permutations, curr_permutation, nums);         // backtracking search
+                curr_permutation.remove(curr_permutation.size() - 1);    // undo the selection
             }
         }
     } 
 }
 ~~~~~
 
-# 3. Generic templates for backtracking
+# 3. A Generic Template for Backtracking
 ~~~~
-res = []                                        // data structure to store all the results that meet the requirement(boundary condition)
-curr_re = []                                    // data structure to store the current result
-backtracking(res, curr_re, elements){           // elements is the list of the elments we can select
-    if(boundary condition is true){             // find a group of elements as one result
-        res.add(curr_re)                        // add the current results
+res = []                                        // global variable to store all the results that meet the requirement(base condition)
+curr = []                                       // global variable to store the current result
+backtrack(res, curr, elements){           // elements is the list of the elments we can select
+    if(base condition is true){                 // find a group of elements as one result
+        res.add(curr)                           // add the current result/path
         return
     }
-    for(i=0;i<len(elements);i++){               // enumerate elements we can select
+    for(i=index;i<len(elements);i++){           // enumerate elements we can select. Not all the elements are selectable(i is not always 0).
         if(selection condition is true){
-          path.add(elements[i])                   // select element
-          backtracking(res, curr_re, elements)    // backtracking
-          path.remove(last_element)               // undo selection
+          curr.add(elements[i])                 // select element
+          backtracking(res, curr, elements)     // backtracking
+          curr.remove(last_element)             // undo selection
       }
     }
 }
-backtracking(res, curr_re, elements)
+backtrack(res, curr_re, elements)
 ~~~~
 
 # 4. Backtracking algorithm in three steps
