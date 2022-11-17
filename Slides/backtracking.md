@@ -9,6 +9,9 @@
   - Declaring that the problem has no answer after trying all possible distribution methods.
 
 # 2. Understanding backtracking algorithms from the permuation problem.
+
+[LeetCode Permutations](https://leetcode.com/problems/permutations/)
+
 Taking the example of solving the full permutation of `[1, 2, 3]`, we will explain the procedure of the backtracking algorithm.
 + 1. Permuations starting with `1`.
   - 1.1 If you select 2 as the middle number, you can only select 3 as the last number, i.e., `[1, 2, 3]`.
@@ -40,4 +43,29 @@ To summarize the permuation backtracking process
   - Going a level upwards is to remove the selected "element" from the "current state" and backtrack to the state it would have been in if the element had not been selected (or reset the state), so that other branches can be explored.
 
 
-  - 
++  Code
+
+~~~~~
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> list = new ArrayList<>();// store all the permutations
+        List<Integer> tempList = new ArrayList<>(); // store the current permutation
+        // Arrays.sort(nums); // not necessary
+        backtrack(list, tempList, nums);
+        return list;
+    }
+
+    private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums){
+        if(tempList.size() == nums.length){ // find a permuation (the condition is true)
+            list.add(new ArrayList<>(tempList)); // add the current permutation into list
+        } else{
+            for(int i = 0; i < nums.length; i++){ //enumerate all the elements we can choose
+                if(tempList.contains(nums[i])) continue; // element already exists, skip
+                tempList.add(nums[i]);                   // select the element
+                backtrack(list, tempList, nums);         // backtracking search
+                tempList.remove(tempList.size() - 1);    // undo the selection
+            }
+        }
+    } 
+}
+~~~~~
