@@ -72,36 +72,36 @@ class Solution {
 
 # 3. A Generic Template for Backtracking
 ~~~~
-res = []                                        // global variable to store all the results that meet the requirement(base condition)
-curr = []                                       // global variable to store the current result
-backtrack(res, curr, elements){           // elements is the list of the elments we can select
-    if(base condition is true){                 // find a group of elements as one result
-        res.add(curr)                           // add the current result/path
+res = []                                              // global variable to store all the results that meet the requirement(base condition)
+curr = []                                             // global variable to store the current result
+backtrack(res, curr, elements, index){                // elements is the list of the elments we can select
+    if(base condition is true){                       // find a group of elements as one result
+        res.add(curr)                                 // add the current result/path
         return
     }
-    for(i=index;i<len(elements);i++){           // enumerate elements we can select. Not all the elements are selectable(i is not always 0).
+    for(i=index;i<len(elements);i++){                 // enumerate elements we can select. Not all the elements are selectable(i is not always 0).
         if(selection condition is true){
-          curr.add(elements[i])                 // select element
-          backtracking(res, curr, elements)     // backtracking
-          curr.remove(last_element)             // undo selection
+          curr.add(elements[i])                       // select element
+          backtracking(res,curr,elements,index+1)     // backtracking
+          curr.remove(last_element)                   // undo selection
       }
     }
 }
-backtrack(res, curr_re, elements)
+backtrack(res, curr_re, elements, 0)
 ~~~~
 
 # 4. Backtracking algorithm in three steps
-The basic idea of the backtracking algorithm is to search for the solution of the problem in a `depth-first search` manner, based on the conditional constraints that generate the child nodes. When it is found that the current node no longer satisfies the solution conditions, it "backtracks" and tries other paths.
+The basic idea of the backtracking algorithm is to search for the solution of the problem in a `depth-first search` manner, based on the conditional constraints that generate the child nodes. When it is found that the current node no longer satisfies the constraints, it "backtracks" and tries other paths.
 + Step 1: draw a decision tree for the search process and determine the search path based on the decision tree
-+ Step 2: detemine the termination conditions of the recursion and what to be executed when the recursion terminates
-+ Step 3: Translate the decision tree and termination conditions into code.
++ Step 2: detemine the base/termination conditions of the recursion and what to be executed when the recursion terminates
++ Step 3: translate the decision tree and base conditions into code.
   - 3.1 Declair the backtracking function (specify the functionality, parameters, return value, etc.)
   - 3.2 Implement/Define the backtracking function (give the constraints, select element, recursive search, and undo the selection part).
   - 3.3 Define recursive termination conditions (give recursive termination conditions and how to handle recursive termination)
 
-## 4.1 Specify all the possible paths 
-+ Decision trees are a great tool to help us make sense of the search process. We can draw a decision tree of the search process, based on which we can help us determine the search scope and the corresponding search path.
-## 4.2 Specify termination conditions
+## 4.1 Specify solution candidates
++ Decision trees are a great tool to help us make sense of the search process. We can draw a decision tree(at least part of it when the size of the problem is large) of the search process, based on which we can help us determine the search scope and the corresponding search path.
+## 4.2 Specify termination conditions for recursion
 + The termination condition of the backtracking algorithm is also the bottom level of the decision tree, i.e., the condition that no more choices can be made is reached.
 + The termination condition of the backtracking function is generally given as depth, leaf nodes, non-leaf nodes (including the root node), all nodes, etc. And you also need to give the following steps under the termination condition, such as outputting the answer, putting the current eligible result into the final result set, etc.
 
@@ -113,8 +113,8 @@ The basic idea of the backtracking algorithm is to search for the solution of th
 
 ### 4.3.1 Declare a backtracking function
 + When defining a backtracking function, be sure to clarify the meaning of the recursive function, that is, understand what the parameters and global variables are for this problem, and what the final returned result is for the problem to be solved.
-+ parameters and global variables: are determined by the "current state" at the time of the recursive search phase. It is better to record the "current state" directly through incoming parameters and global variables
-  - For example, in the permutation problem, the `backtracking(List<List<Integer>> list, List<Integer> tempList, int [] nums)` function takes `nums` (a list of selectable elements) as an parameter and `list` (a set array of all eligible results) and `tempList` (the current eligible results) as global variables. `nums` represents the current selectable elements and `tempList` is used to record the "current state" of the recursive search phase.  `list` is used to store the "all the states" of the recursive search phase.
++ parameters and global variables: are determined by the "current state" at the time of the recursive search phase. It is better to record the "current state" directly through parameters and global variables
+  - For example, in the permutation problem, the `backtrack(List<List<Integer>> permutations, List<Integer> curr_permutation, int [] nums)` function takes `nums` (a list of selectable elements) as an parameter and `permutations` (a set array of all eligible results) and `curr_permutation` (the current eligible result) as global variables (also parameters of the backtrack function). `nums` represents the current selectable elements and `curr_permutation` is used to record the "current state" of the recursive search phase.  `permutations` is used to store the "all the states" of the recursive search phase.
 
 + Return result: The return result is the information that needs to be returned to the upper level function when the recursive termination condition is encountered.
   - Generally, the return result of the backtracking function is a single node or a single value, which tells the higher-level function what our current search result is.
@@ -124,11 +124,11 @@ The basic idea of the backtracking algorithm is to search for the solution of th
 + Based on the current list of selectable elements, the given constraints (e.g. the number that has appeared before cannot appear again in the next number to be selected), and the variable that holds the current state, we can write the body part of the backtracking function.
 
 ~~~~
-for(i=0;i<len(elements);i++){               // enumerate elements we can select
+for(i=0;i<len(elements);i++){                                       // enumerate elements we can select
         if(selection condition is true){
-          path.add(elements[i])                   // select element
-          backtracking(res, curr_re, elements)    // backtracking
-          path.remove(last_element)               // undo selection
+          curr_permutation.add(elements[i])                         // select element
+          backtracking(permutations, curr_permutation, elements)    // backtracking
+          curr_permutation.remove(curr_permutation.size() - 1)      // undo selection
         }
 }
 ~~~~
@@ -137,20 +137,19 @@ for(i=0;i<len(elements);i++){               // enumerate elements we can select
 + This step actually converts the recursive termination conditions and the following processing steps under the termination conditions from the section `4.2 Specify Termination Conditions` into conditional statements and corresponding execution statements in the code.
 
 ~~~~
-if(boundary condition is true){                 // find a group of elements as one result
-        res.add(curr_re)                        // add the current results
-        return
-}
+if(curr_permutation.size() == nums.length){                      // find a permuation (the base condition is true)
+    permutations.add(new ArrayList<>(curr_permutation));         // add the current permutation into list
+} 
 ~~~~
 
 # 5. Examples
 ## 5.1 [LeetCode 78: Subsets](https://leetcode.com/problems/subsets/)
 Solution:
 + For each element of the array, we have two choices: to select or not to select.
-+ We can indicate that an element is selected by adding an optional element to the current subset array. We can also indicate that an element is not selected by removing the previously added element from the current subset array after the current recursion has ended (i.e., backtracking)
-+ In the following, we complete the corresponding backtracking algorithm based on the three steps of the backtracking algorithm.
++ We can indicate that an element is selected by adding an selectable element to the current subset array. We can also indicate that an element is not selected by removing the previously added element from the current subset array  (i.e., backtracking) after the current recursion has ended.
++ In the following, we complete the corresponding backtracking algorithm based on the three steps introduced above.
 
-### Step 1. Demonstrate all choices: 
+### Step 1. Specify solution candidates: 
 + Draw a decision tree based on the two choices of selecting or not selecting elements at each position in the array, as shown in the figure below
 
 ![subset](../Resources/subset.png)
@@ -160,31 +159,31 @@ Solution:
 
 ### Step 3. Translate the decision tree and termination conditions into code.
 #### Define the backtracking function
-+ backtracking(nums, index): The incoming arguments to the function are nums (a list of optional arrays) and index (representing the element currently under consideration is nums[i]), and the global variables are res (a set array of all eligible results) and path (the current eligible results).
-+ backtracking(nums, index): The function represents the recursive selection of the remaining elements in case `nums[index]` is selected.
++ `backtrack(int index, ArrayList<Integer> curr, int[] nums)`: The arguments to the function are nums (a list of selectable elements) and `index` (representing the element currently under consideration is `nums[i]`), and the global variables are `output` (a set array of all eligible results) and `curr` (the current eligible result).
++ `backtrack(int index, ArrayList<Integer> curr, int[] nums)`: The function represents the recursive selection of the remaining elements in case `nums[index]` is selected.
 
 #### Complete the body of the backtracking function
-+ Enumerates all the optional elements from the current element being considered, up to the end of the array. For each optional element
-  - Constraint: Previously selected elements are not repeated. The reason for iterating from the index position instead of the 0 position is to avoid duplication. Unlike full permutations, subsets {1, 2} and {2, 1} are equivalent. To avoid repetition, we do not repeat the elements we considered before.
++ Enumerates all the selectable elements from the current elements being considered, up to the end of the array. For each selectable element
+  - Constraint: Previously selected elements are not repeated. The reason for iterating from the `index` position instead of the 0 position is to avoid duplication. Unlike full permutations, subsets {1, 2} and {2, 1} are equivalent. To avoid repetition, we do not repeat the elements we considered before.
   - Select element: add it to the current subset path.
-  - Recursive search: in case of selecting this element, continue recursively considering the element at the next position.
-  - Undo selection: Remove the element from the current subset array path
+  - Recursive search: in case of selecting this element, continue recursively considering the elements starting at the next position.
+  - Undo selection: Remove the element from the current subset array
 ### Specify termination conditions
 + The traversal terminates when it reaches the leaf nodes of the decision tree. That is, the recursion stops when the position of the element under consideration reaches the end of the array (i.e., start >= len(nums)).
-+ It is also clear from the decision tree that the set of answers that the subset needs to store should contain all the nodes on the decision tree and should need to save all the states of the recursive search. So whether the termination condition is reached or not, we should put the current eligible results into the set.
++ It is also clear from the decision tree that the set of solutions that the subset needs to store should contain all the nodes on the decision tree and should need to save all the states of the recursive search. So whether the termination condition is reached or not, we should put the current eligible results into the set.
 + Code
 ~~~~
 class Solution {
-  List<List<Integer>> output = new ArrayList();
-  int n, k;
+  List<List<Integer>> output = new ArrayList();      //global variable to store the results
+  int n, k;                                          // n is the number of elements, k is the length of subsets
 
-  public void backtrack(int first, ArrayList<Integer> curr, int[] nums) {
+  public void backtrack(int index, ArrayList<Integer> curr, int[] nums) {
     // if the combination is done
     if (curr.size() == k) {
       output.add(new ArrayList(curr));
       return;
     }
-    for (int i = first; i < n; ++i) {
+    for (int i = index; i < n; ++i) {
       // add i into the current combination
       curr.add(nums[i]);
       // use next integers to complete the combination
@@ -220,7 +219,7 @@ class Solution {
 ### Step 3: 
 #### Define the backtracking function
 + First we start with a two-dimensional matrix chessboard of size `n * n` to represent the current board, the characters `Q` in the chessboard represent queens and `.` represents the empty squares. The chessboard will be all `.` initially .
-+ Then we define the backtrack function `backtrack(chessboard, row)`. the arguments of the function are chessboard (the array of chessboards) and row (representing the current row of queens being considered for placement), and the global variable res (the set array of all eligible results).
++ Then we define the backtrack function `backtrack(chessboard, row)`. the arguments of the function are `chessboard` (the 2d array of chessboard) and `row` (representing the current row of queens being considered for placement), and the global variable res (the set array of all eligible results).
 + backtrack(chessboard, row): function means `recursively place the queens of the remaining rows if the queens of the row are placed`.
 #### Complete the body of the backtracking function
 Enumerates all columns of the current row. For each column position.
