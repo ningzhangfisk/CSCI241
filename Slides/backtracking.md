@@ -219,19 +219,86 @@ class Solution {
 ### Step 3: 
 #### Define the backtracking function
 + First we start with a two-dimensional matrix chessboard of size `n * n` to represent the current board, the characters `Q` in the chessboard represent queens and `.` represents the empty squares. The chessboard will be all `.` initially .
-+ Then we define the backtrack function `backtrack(chessboard, row)`. the arguments of the function are `chessboard` (the 2d array of chessboard) and `row` (representing the current row of queens being considered for placement), and the global variable res (the set array of all eligible results).
-+ backtrack(chessboard, row): function means `recursively place the queens of the remaining rows if the queens of the row are placed`.
++ Then we define the backtrack function `backtrack(int i, int n,List<List<String>> ans, char[][] board)`. the arguments of the function are `chessboard` (the 2d array of chessboard) and `i` (representing the current row of queens being considered for placement), and the global variable `ans` (the set array of all eligible results).
++ `backtrack(int i, int n,List<List<String>> ans, char[][] board)`: function means `recursively place the queens of the remaining rows if the queens of the (i-1)th row are placed`. Note that when i=0, it means the board is empty.
 #### Complete the body of the backtracking function
 Enumerates all columns of the current row. For each column position.
-+ Constraint: Define a judgment method that first determines if the current position conflicts with a previously placed queen on the board, if not then continue placing, otherwise continue traversing backwards.
-+ Select element: Select row, col position to place the queen, and set the corresponding position on the board to Q.
++ Constraint: First, define a judgment method `isSafe` that determines if the current position conflicts with a previously placed queen on the board, if not then continue placing, otherwise continue traversing backwards.
++ Select element: Select row, col (i,j) position to place the queen, and set the corresponding position on the board to `Q`.
 + Recursive search: If a queen is placed at that position, continue recursively considering the next row.
-+ Undo selection: Set the row, col position on the board to .
++ Undo selection: Set the row, col (i,j) position on the board to `.`
 ### Specify termination conditions
-+ The recursion terminates when the traversal reaches a leaf node of the decision tree. That is, the recursion stops when the queen is placed in the last row (i.e., row == n).
++ The recursion terminates when the traversal reaches a leaf node of the decision tree. That is, the recursion stops when the queen is placed in the last row (i.e., i == n).
 + When the recursion stops, the current eligible board is converted to the form needed for the answer, and then it is simply stored in the answer array res.
 
 ## Code
 ~~~~
-
+class Solution {
+    public List<List<String>> solveNQueens(int n) {
+        List<List<String>> ans = new ArrayList<>();
+        char[][] board = new char[n][n];
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                board[i][j] = '.';
+            }
+        }
+        backtrack(0,n,ans,board);
+        return ans;
+        
+    }
+    void backtrack(int i, int n,List<List<String>> ans, char[][] board)
+    {
+        //BASE CASE
+        if(i==n){
+            List<String> temp = new ArrayList<>();
+            for(int j=0; j<n;j++){
+                String s = new String(board[j]);
+                temp.add(s);
+            }
+            ans.add(temp);
+            return;
+        }
+        
+        //RECURSION
+        for(int j=0; j<n; j++){
+            if(isSafe(i,j,board,n)){
+                board[i][j] = 'Q';
+                backtrack(i+1,n,ans,board);
+                board[i][j] = '.';
+            }
+        }
+    }
+    
+    boolean isSafe(int i,int j,char[][] board,int n)
+    {
+        //up
+        int tempi = i;
+        while(tempi>=0){
+            if(board[tempi][j] == 'Q')
+                return false;
+            tempi--;
+        }
+        
+        //Right Diagonal
+        tempi = i;
+        int tempj = j;
+        while(tempi>=0 && tempj<=n-1){
+            if(board[tempi][tempj] == 'Q')
+                return false;
+            tempi--;
+            tempj++;
+         }
+        
+        //left diagonal
+         tempi = i;
+        tempj = j;
+        while(tempi>=0 && tempj>=0){
+            if(board[tempi][tempj] == 'Q')
+                return false;
+            tempi--;
+            tempj--;
+         }
+        return true;
+    }
+}
 ~~~~
