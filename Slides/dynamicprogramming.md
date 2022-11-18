@@ -150,4 +150,33 @@ class Solution {
 }
 ~~~~
 
+# More about DP
+## Memoization
++ Most of the Dynamic Programming problems are solved in two ways: Tabulation: Bottom Up; Memoization: Top Down
++ Examples: LeetCode 1137,0375,0494,0576,0087,0403,0552,0913,0329
 
+## Linear DP
++ Examples: LeetCode 0118,0119,0198,0213,0338,0045,0115,0403,0576,0091,0639,0650,0678,0688,1137,1220,1751,1787,0300,1143,0120,0053,0152,0887,0072,0044,0010,0354,0121,0122,0123,0188,0309,0714
+
+## Knapsack problem
++ Examples: LeetCode  0279,0322,0416,0474,0494,0518,0638,0879,1049,1155,1449,1995
+
+## interval scheduling
++ Examples: LeetCode 1995,0375,0516,0730,1039,0664,0877,2104,0312
+
+## DP on trees
++ Examples: LeetCode 0124,0543,0337,0333
+
+## State Compression
++ Examples: LeetCode 0526,0464,0847,1994,0935,1349
+
+## Counting bits
++ Examples: LeetCode 0062,0063,0096,1259
+
+## Digit DP
++ Examples: LeetCode 0600,0233,0902,1015
+
+## Probabilistic DP
++ Examples: LeetCode 0688,0808,0837
+
+## DP Optimization
