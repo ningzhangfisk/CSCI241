@@ -41,7 +41,7 @@ Problems that can be solved using dynamic programming must satisfy the following
 
 + This kind of multi-stage decision making problem with a chain-like structure is also called "multi-stage decision making problem".
 + Usually we use dynamic programming to solve multi-stage decision problems with the following basic steps.
-  - 1). **Partiton stages**: The original problem is decomposed into a number of interrelated "stages" in a sequential order (chronological, spatial, or otherwise). The partitioned stages must be ordered or sortable, otherwise the problem can not be solved.
+  - 1). **Partiton stages**: The original problem is decomposed into a number of interrelated "stages" in a sequential order (temporal, spatial, or otherwise). The partitioned stages must be ordered or sortable, otherwise the problem can not be solved.
     + `Stages` here refers to the process of solving subproblems. The process of solving each subproblem constitutes a "stage", and the solution of the next stage will be carried out only after the solution of the previous stage has been completed.
 
   - 2). **Define state**: Use some variable related to the subproblem (position, quantity, volume, space, etc.) to define a "state". The chosen state must satisfy `no posteriority`.
