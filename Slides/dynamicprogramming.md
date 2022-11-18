@@ -34,7 +34,7 @@ Problems that can be solved using dynamic programming must satisfy the following
 + If a problem has "posteriority", it may need to be transformed or solved backwards to eliminate the posteriority before dynamic programming methods can be used.
 
 # 2. Steps of DP
-+ As shown in the figure below, when we use dynamic programming to solve certain `optimization problems`, we can decompose the problem-solving process into a number of interconnected "stages" in a certain order (temporal, spatial, or other order). Then, for each stage, a "decision" is made, which determines both the "benefit" of this stage and the initial state of the next stage. After making decisions for each stage in turn, a sequence of decisions for the entire problem is obtained.
++ As shown in the figure below, when we use dynamic programming to solve certain `optimization problems`, we can decompose the problem-solving process into a number of interconnected "stages" in a certain order (temporal, spatial, or other order). Then, for each stage, a "decision" is made, which determines both the "benefit/value/result" of this stage and the initial state of the next stage. After making decisions for each stage in turn, a sequence of decisions for the entire problem is obtained.
 + This decomposes an original problem into a series of subproblems, which are then solved step by step to obtain the final result.
 
 ![multi stage](../Resources/multistage.png)
