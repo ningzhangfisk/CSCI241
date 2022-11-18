@@ -47,9 +47,9 @@ Problems that can be solved using dynamic programming must satisfy the following
   - 2). **Define state**: Use some variable related to the subproblem (position, quantity, volume, space, etc.) to define a "state". The chosen state must satisfy `no posteriority`.
     + A "state" corresponds to one or more subproblems, and the values in a "state" refers to the solution of the corresponding subproblem.
 
-  - 3). **Transfer state equation**: Based on the `state of the previous stage` and the `decisions that can be made in that state`, we derive the `state of the next stage`. In other words, we determine the decision based on the relationship between the states of two adjacent stages, and then derive the way to transfer the states to each other (i.e., the "state transfer equation").
-  - 4). **Initial and boundary conditions**: Determine the initial and boundary conditions based on the problem description, state definition and state transfer equations.
-  - 5). **Final result**: Determine the objective of the problem, and then each stage of the problem is solved in a certain order. Finally, the final result is determined based on the recursive results of the state transfer equation.
+  - 3). **Define state transfer equation**: Based on the `state of the previous stage` and the `decisions that can be made in that state`, we derive the `state of the next stage`. In other words, we determine the decision based on the relationship between the states of two adjacent stages, and then derive the way to transfer the states to each other (i.e., the "state transfer equation").
+  - 4). **Define initial/boundary conditions**: Determine the initial conditions based on the problem description, state definition and state transfer equation.
+  - 5). **Define final result**: Determine the objective of the problem, and then each stage of the problem is solved in a certain order. Finally, the final result is determined based on the recursive results of the state transfer equation.
 
 # 3. Examples
 + Dynamic programming-related problems tend to be flexible and difficult to figure out, without a particularly obvious formula, and often appear in various algorithm competitions and interviews.
