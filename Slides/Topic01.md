@@ -1,6 +1,6 @@
 # CSCI241 - Data Structures and Algorithms
 # Dr. Ning Zhang
-# Topic 1: Introduction to CSCI241
+# Topic 0: Introduction to CSCI241
 # 1. Data structures and algorithms
 ## 1.1 Why Data structures and algorithms(DSA)?
 + CSCI241 and CSCI241L are in the Balance Sheet.
