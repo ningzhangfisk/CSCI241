@@ -131,22 +131,25 @@ An algorithm to add two numbers:
 + Real-world projects and applications.
 
 # 2. Java Programming Language
-+ Go through Chapters 1 and 2 in the textbook or any tutorial online to review Java programming language.
-  - See the handouts for these two chapters [here](../Handouts)
-+ You can use any online/offline text editor or IDE in this class. 
++ Go through Chapters 1-11 in the textbook or any tutorial online to review Java programming language.
+  - primitive data types
+  - if-else
+  - loops
+  - methods
+  - classes and objects
++ To write your code, you can use any online/offline text editor, IDE, or platform. 
   - Text editor: Notepad++, Sublime, VI, Emacs...
   - IDE: Ecllipes, BlueJ, IntelliJ,...
-+ I will be using an online IDE named [Replit](https://replit.com/)
-  - [Replit Documentations](https://docs.replit.com/category/getting-started)
+  - Platform: [Replit](https://replit.com/)
++ Homework assignments and labs are on [Edstem](https://edstem.org/us/dashboard) 
+
 ## 2.1 Minimum Requirements in CSCI241
 + Compile and execute a Java program
-  - If you are using Replit, see the first lab in CSCI241L for more details.
-  - [Example: CSCI241L Lab1](https://replit.com/@ZhangNing1/CSCI241#CSCI241/Array.java)
+  - javac and java commands
 + Java Class
   - attributes
   - constructors
   - methods
-  - [Example: One dimensional array](https://replit.com/@ZhangNing1/CSCI241NingZhang#CSCI241/OneDimensionalArray.java)
 
 
 # References
