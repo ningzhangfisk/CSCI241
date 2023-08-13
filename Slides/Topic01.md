@@ -1,6 +1,6 @@
 # CSCI241: Data Structures and Algorithms
 # Dr. Ning Zhang
-# Topic 2: Arrays
+# Topic 1: Arrays
 + One dimensional arrays(section 3.1 in textbook)
 + Two dimensional arrays
 + Sparse matrices
